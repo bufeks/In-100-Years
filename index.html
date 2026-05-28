@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In 100 Years — 100年後リサーチ</title>
+<meta name="description" content="100年後に必要とされるのに、いまは評価されていないものを世界中の情報から系統的に探すリサーチ基盤。">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#11182e; --card:#ffffff; --ink:#1a1a2e; --muted:#5b6478;
+    --line:#e6e8f0; --accent:#4f46e5; --accent2:#0ea5a4; --amber:#f59e0b;
+    --gold:#d4a017; --green:#16a34a; --blue:#2563eb; --gray:#9aa3b2;
+    --maxw:980px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; color:var(--ink); background:#f6f7fb;
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.75; font-size:16px; letter-spacing:.01em;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* sticky nav */
+  .nav{position:sticky; top:0; z-index:50; background:rgba(11,16,32,.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-inner{max-width:var(--maxw); margin:0 auto; padding:10px 20px;
+    display:flex; gap:6px 16px; flex-wrap:wrap; align-items:center}
+  .nav .brand{color:#fff; font-weight:700; margin-right:auto; letter-spacing:.04em}
+  .nav a{color:#c7cde0; font-size:13.5px; white-space:nowrap}
+  .nav a:hover{color:#fff; text-decoration:none}
+
+  /* hero */
+  .hero{background:radial-gradient(1200px 500px at 70% -10%,#1e2a55 0,var(--bg) 55%); color:#eef1fb}
+  .hero-inner{max-width:var(--maxw); margin:0 auto; padding:64px 20px 56px}
+  .eyebrow{color:#8ea2ff; font-weight:700; letter-spacing:.18em; font-size:12.5px; text-transform:uppercase}
+  .hero h1{font-size:clamp(30px,5vw,52px); line-height:1.15; margin:.35em 0 .25em; letter-spacing:.01em}
+  .hero .lede{font-size:clamp(16px,2.2vw,20px); color:#c4cbe6; max-width:62ch; margin:0}
+  .formula{margin-top:30px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+    border-radius:14px; padding:18px 20px; display:inline-block}
+  .formula .eq{font-size:clamp(15px,2.5vw,21px); font-weight:700; color:#fff}
+  .formula .eq b{color:#ffd27a}
+  .formula .sub{display:flex; gap:18px 28px; flex-wrap:wrap; margin-top:8px; color:#aab3d4; font-size:13px}
+  .formula .sub span b{color:#9fe3df}
+
+  /* layout */
+  main{max-width:var(--maxw); margin:0 auto; padding:8px 20px 80px}
+  section{padding:46px 0 8px; border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  h2{font-size:clamp(22px,3.4vw,30px); margin:.2em 0 .1em; letter-spacing:.01em}
+  h2 .num{color:var(--accent); font-variant-numeric:tabular-nums; margin-right:.5ch}
+  .sec-lead{color:var(--muted); margin:.2em 0 1.4em; max-width:64ch}
+  h3{font-size:18px; margin:1.6em 0 .4em}
+
+  .grid{display:grid; gap:16px}
+  @media(min-width:720px){ .grid.cols-2{grid-template-columns:1fr 1fr} .grid.cols-3{grid-template-columns:1fr 1fr 1fr} }
+
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px;
+    box-shadow:0 1px 2px rgba(16,24,40,.04)}
+  .card h3{margin-top:0}
+  .lens{border-left:4px solid var(--accent2)}
+  .lens.b{border-left-color:var(--accent)}
+  .lens.c{border-left-color:var(--amber)}
+  .kicker{font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent2)}
+
+  table{width:100%; border-collapse:collapse; font-size:14.5px; margin:.4em 0 1em; overflow:hidden;
+    border-radius:12px; border:1px solid var(--line); background:#fff}
+  th,td{padding:10px 12px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+  thead th{background:#f0f2f9; font-size:12.5px; letter-spacing:.03em; color:#3a4256}
+  tbody tr:last-child td{border-bottom:0}
+  td.num,th.num{text-align:center; font-variant-numeric:tabular-nums}
+  .scorewrap{overflow-x:auto}
+
+  /* tier badges */
+  .tier{display:inline-block; min-width:26px; text-align:center; font-weight:800; font-size:12.5px;
+    padding:2px 9px; border-radius:999px; color:#fff}
+  .tier.S{background:linear-gradient(135deg,#e3b341,#b8860b)}
+  .tier.A{background:var(--green)}
+  .tier.B{background:var(--blue)}
+  .tier.C{background:var(--gray)}
+
+  .score{font-weight:800; font-variant-numeric:tabular-nums}
+  .pill{display:inline-block; font-size:12px; color:var(--muted); background:#eef0f7;
+    border:1px solid var(--line); border-radius:999px; padding:1px 10px; margin:0 4px 4px 0}
+
+  /* idea cards */
+  .idea{position:relative}
+  .idea .top{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+  .idea .id{font-variant-numeric:tabular-nums; color:var(--muted); font-weight:700; font-size:13px}
+  .idea h3{flex:1; margin:0}
+  .idea .one{font-size:15px; color:#2b3147; font-weight:600; margin:.2em 0 .8em}
+  .idea dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font-size:14px}
+  .idea dt{color:var(--muted); white-space:nowrap}
+  .idea dd{margin:0}
+  .bar{height:7px; border-radius:999px; background:#eceef5; overflow:hidden; margin-top:12px}
+  .bar > i{display:block; height:100%; background:linear-gradient(90deg,var(--accent2),var(--accent))}
+
+  .callout{background:#fff7ed; border:1px solid #fcd9a8; border-radius:12px; padding:14px 18px; color:#7c4a03}
+  .principles li{margin:.3em 0}
+  footer{max-width:var(--maxw); margin:0 auto; padding:30px 20px 60px; color:var(--muted); font-size:13.5px; border-top:1px solid var(--line)}
+  .src{font-size:13.5px}
+  .src li{margin:.25em 0}
+  .meta{color:var(--muted); font-size:13px}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <span class="brand">In 100 Years</span>
+  <a href="#method">方法論</a>
+  <a href="#framework">評価フレーム</a>
+  <a href="#domains">ドメイン</a>
+  <a href="#trends">メガトレンド</a>
+  <a href="#scoreboard">スコアボード</a>
+  <a href="#ideas">アイデア</a>
+  <a href="#signals">シグナル</a>
+  <a href="#sources">出典</a>
+</div></nav>
+
+<header class="hero"><div class="hero-inner">
+  <div class="eyebrow">Research Repository · 約2125年を見据えて</div>
+  <h1>100年後に必要とされるのに、<br>いまは評価されていないもの。</h1>
+  <p class="lede">世界中の情報から「ほぼ確実に来る未来 × いまは安い × 自分が握れる」地点を系統的に探す。早すぎる確信に所有を置き、長期の非対称なリターンを狙うためのリサーチ基盤。</p>
+  <div class="formula">
+    <div class="eq">期待リターン ≈ <b>不可避性</b> × <b>評価ギャップ</b> × <b>捕捉可能性</b></div>
+    <div class="sub">
+      <span><b>不可避性</b>：来るか</span>
+      <span><b>評価ギャップ</b>：いま安いか</span>
+      <span><b>捕捉可能性</b>：自分が握れるか</span>
+    </div>
+  </div>
+</div></header>
+
+<main>
+
+  <section id="method">
+    <h2><span class="num">01</span>方法論</h2>
+    <p class="sec-lead">中心の問いは「自分は正しいと確信しているのに、ほとんどの人がまだ同意していない “未来の真実” は何か？」。賛同が多い未来はすでに価格に織り込まれている。狙うのは「正しいのに不人気」な一点。候補は次の3レンズを通して生む。</p>
+    <div class="grid cols-3">
+      <div class="card lens">
+        <div class="kicker">レンズA</div>
+        <h3>逆算（Backcasting）</h3>
+        <p>2125年の「常識」を具体的なワンシーンとして描き、そこから現在へ橋を逆にたどる。「それが成り立つために、誰かが先に作る／発見する／変えるべきもの」を抜き出す。</p>
+      </div>
+      <div class="card lens b">
+        <div class="kicker">レンズB</div>
+        <h3>不可避な駆動力</h3>
+        <p>世紀をまたいでも折れない力を起点に延ばす——物理（熱・エネルギー・材料・有限元素）、生物（老化・食）、人口、情報（計算・信頼）、惑星の限界、人間性の定数。</p>
+      </div>
+      <div class="card lens c">
+        <div class="kicker">レンズC</div>
+        <h3>評価ギャップ</h3>
+        <p>いま見過ごされている場所を狙う——退屈／タブー・低ステータス／不可視（外部性）／早すぎる記憶／辺境。語りにくさそのものが参入障壁になる。</p>
+      </div>
+    </div>
+
+    <h3>時間アービトラージ（核心原理）</h3>
+    <p>「早すぎることは、間違っていることと区別がつかない」。価値はコンセンサスより前の確信に宿る。世界が気づく前に確信を組み上げ、安いうちに所有を置く。</p>
+
+    <h3>「所有」をどこに置くか</h3>
+    <p>正しい未来を当てても、所有の置き場所を間違えると儲からない（金を掘る人より、つるはしを売る人が儲かる）。</p>
+    <div>
+      <span class="pill">鉱山：希少な資源・権利</span>
+      <span class="pill">つるはし：全員が要る道具・部品</span>
+      <span class="pill">関所：必ず通る規格・標準</span>
+      <span class="pill">地主：価値が乗る土台・市場</span>
+      <span class="pill">知：模倣されにくい特許・ノウハウ・人脈</span>
+    </div>
+  </section>
+
+  <section id="framework">
+    <h2><span class="num">02</span>評価フレームワーク</h2>
+    <p class="sec-lead">価値の式を再現性のある採点に落とす。各アイデアを7軸で 1〜5 点づけし、加重合計（満点100）と確信ティアを出す。採点前に「殺しの質問」に答える：①なぜ今やる人が少ないか ②自分が間違うとしたらどこか ③ボトルネックは何で誰が握るか ④自分はどの所有の型で握るか。</p>
+    <div class="scorewrap">
+    <table>
+      <thead><tr><th>軸</th><th>問い</th><th class="num">重み</th></tr></thead>
+      <tbody>
+        <tr><td>不可避性</td><td>100年スパンでその需要は来るか</td><td class="num">×4</td></tr>
+        <tr><td>時間整合性</td><td>一過性でなく構造的・長期的か</td><td class="num">×3</td></tr>
+        <tr><td>評価ギャップ</td><td>いまどれだけ過小評価されているか</td><td class="num">×4</td></tr>
+        <tr><td>文明規模</td><td>成立時のインパクト／市場の大きさ</td><td class="num">×3</td></tr>
+        <tr><td>捕捉可能性</td><td>防御できる「所有」を築けるか</td><td class="num">×4</td></tr>
+        <tr><td>着手可能性</td><td>今日から布石を打てるか</td><td class="num">×1</td></tr>
+        <tr><td>非対称性</td><td>外した時の損 vs 当たった時の利</td><td class="num">×1</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="meta">不可避性・評価ギャップ・捕捉可能性を厚く重みづけ（＝価値の式の3因子）。確信ティア：<span class="tier S">S</span> 85–100 ／ <span class="tier A">A</span> 70–84 ／ <span class="tier B">B</span> 55–69 ／ <span class="tier C">C</span> 〜54。</p>
+  </section>
+
+  <section id="domains">
+    <h2><span class="num">03</span>探索ドメインの地図</h2>
+    <p class="sec-lead">不可避な駆動力を、系統的に探す12ドメインへ展開。シグナルを拾ったら、まずここに分類する。</p>
+    <div class="grid cols-2">
+      <div class="card"><h3>A. エネルギー・熱</h3><p>エネルギーが安くなるほど、廃熱・冷却・熱の輸送と貯蔵が希少に。</p></div>
+      <div class="card"><h3>B. 計算・知能</h3><p>知能が無料化すると、ボトルネックは検証・現実とのインターフェースへ。</p></div>
+      <div class="card"><h3>C. 情報の真正性・信頼</h3><p>すべてが偽造可能な世界で「本物である証明（来歴）」が前提に。</p></div>
+      <div class="card"><h3>D. 記憶・長期保存</h3><p>知識は爆発し媒体は腐る。数百〜数千年読める媒体を握る者。</p></div>
+      <div class="card"><h3>E. 生命・老化・健康</h3><p>老化・病は普遍。予防・診断・生物学的年齢の計測という土台。</p></div>
+      <div class="card"><h3>F. 食・農・栄養塩</h3><p>有限なリン・窒素。栄養塩の回収・循環という退屈な必然。</p></div>
+      <div class="card"><h3>G. 水・土壌・自然資本</h3><p>価格のついていない自然資本（外部性）にいずれ値段がつく。</p></div>
+      <div class="card"><h3>H. 材料・循環・都市鉱山</h3><p>新規採掘の限界。金属は回収・リサイクルから来る。</p></div>
+      <div class="card"><h3>I. 人口・家族・生殖</h3><p>世界的な出生率低下。タブーゆえ過小評価される生殖・人口維持。</p></div>
+      <div class="card"><h3>J. 高齢化・ケア・自立支援</h3><p>低ステータスゆえ参入が少ない介護・認知・自立支援。</p></div>
+      <div class="card"><h3>K. 統治・制度・調整</h3><p>複雑化する社会で、新しい「関所」（調整・所有の規格）が生まれる。</p></div>
+      <div class="card"><h3>L. 心・意味・つながり</h3><p>物質的欠乏が解け、意味・孤独・承認・物語が希少化する。</p></div>
+    </div>
+  </section>
+
+  <section id="trends">
+    <h2><span class="num">04</span>初回メガトレンド分析</h2>
+    <p class="sec-lead">100年でも折れない6つの力と、それぞれに眠る評価ギャップ。主要金融機関のメガトレンド観でさえ視野は数十年——100年視点はその外にあり、ここに構造的優位がある。</p>
+    <div class="grid cols-2">
+      <div class="card"><h3>1. エネルギーは安く、熱は高くなる</h3><p>熱力学は折れない。使ったエネルギーは必ず熱になる。発電（生産）は超人気だが、<b>廃熱・冷却・熱経済</b>は地味で過小評価。</p></div>
+      <div class="card"><h3>2. 知能は無料に、希少は「検証」へ</h3><p>賢さはコモディティ化。価値は「信頼できるか」「現実を動かせるか」に宿る。モデル競争は過熱、<b>真正性・来歴</b>は黎明。</p></div>
+      <div class="card"><h3>3. 知識は爆発し、媒体は腐る</h3><p>増え続ける知識と腐る器のギャップ。DNAストレージ等の<b>超長期アーカイブ</b>は研究段階で市場未成熟。</p></div>
+      <div class="card"><h3>4. 人口は縮み、高齢化する</h3><p>出生率低下はほぼ全地域で進行。<b>生殖・人口維持</b>はタブー、<b>ケア</b>は低ステータスゆえ参入が薄い。</p></div>
+      <div class="card"><h3>5. 有限な元素が首を絞める</h3><p>リンは代替不能・可採年数75〜100年。新規採掘は止まり、<b>回収・循環</b>できる者が原資産を握る。</p></div>
+      <div class="card"><h3>6. 意味・つながり・信頼が希少化</h3><p>モノが安くなるほど、相対的に希少になるのは時間・意味・承認・信頼という人間性の定数。</p></div>
+    </div>
+  </section>
+
+  <section id="scoreboard">
+    <h2><span class="num">05</span>スコアボード</h2>
+    <p class="sec-lead">初回の有望テーマ5件を7軸で採点（合成スコア降順）。いずれも折れない力に根ざし、退屈／タブー／早すぎで見過ごされている。分かれ目は<b>捕捉可能性</b>——「広く確実な需要」と「握れる所有」は別物。</p>
+    <div class="scorewrap">
+    <table>
+      <thead><tr>
+        <th>ID</th><th>テーマ</th><th>ドメイン</th>
+        <th class="num">不可避</th><th class="num">ギャップ</th><th class="num">捕捉</th>
+        <th class="num">合成</th><th class="num">ティア</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">0002</td><td>超長期アーカイブ</td><td>D 記憶</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num score">85</td><td class="num"><span class="tier S">S</span></td></tr>
+        <tr><td class="num">0003</td><td>廃熱経済</td><td>A 熱</td><td class="num">5</td><td class="num">4</td><td class="num">3</td><td class="num score">84</td><td class="num"><span class="tier A">A</span></td></tr>
+        <tr><td class="num">0005</td><td>生殖・ケア</td><td>I/J 人口</td><td class="num">5</td><td class="num">5</td><td class="num">2</td><td class="num score">84</td><td class="num"><span class="tier A">A</span></td></tr>
+        <tr><td class="num">0004</td><td>来歴・真正性インフラ</td><td>C 信頼</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num score">83</td><td class="num"><span class="tier A">A</span></td></tr>
+        <tr><td class="num">0001</td><td>リン回収・栄養塩循環</td><td>F 食農</td><td class="num">5</td><td class="num">4</td><td class="num">3</td><td class="num score">81</td><td class="num"><span class="tier A">A</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="meta">重み：不可避×4・時間×3・ギャップ×4・規模×3・捕捉×4・着手×1・非対称×1（満点100）</p>
+  </section>
+
+  <section id="ideas">
+    <h2><span class="num">06</span>採点済みアイデア</h2>
+    <p class="sec-lead">5件の有望テーマ候補。各カードは「一言／なぜ必要か／なぜ安いか／所有の置き場所」を要約。</p>
+    <div class="grid cols-2">
+
+      <div class="card idea">
+        <div class="top"><span class="id">0002</span><h3>超長期アーカイブ</h3><span class="tier S">S</span></div>
+        <p class="one">数百〜数千年劣化しない媒体に知識を刻む「文明のバックアップ」。</p>
+        <dl>
+          <dt>必要性</dt><dd>知識は指数増、デジタル媒体は数十年で腐る。AIが情報爆発を加速。</dd>
+          <dt>評価ギャップ</dt><dd>早すぎ＋不可視。DNAストレージ（10¹⁹ bits/cm³）は研究段階。</dd>
+          <dt>所有</dt><dd>つるはし（装置・素材）＋関所（解読規格）＋知（特許）。</dd>
+        </dl>
+        <div class="bar"><i style="width:85%"></i></div>
+      </div>
+
+      <div class="card idea">
+        <div class="top"><span class="id">0003</span><h3>廃熱経済</h3><span class="tier A">A</span></div>
+        <p class="one">エネルギーが安くなるほど希少になる「廃熱の回収・貯蔵・輸送」。</p>
+        <dl>
+          <dt>必要性</dt><dd>熱力学＋計算/生活水準の上昇。熱は捨てるコストから資源へ。</dd>
+          <dt>評価ギャップ</dt><dd>地味。冷却は注目され始め、狙いは長時間・季節間の熱貯蔵。</dd>
+          <dt>所有</dt><dd>つるはし（熱貯蔵材料・変換装置）＋鉱山（廃熱源の立地）。</dd>
+        </dl>
+        <div class="bar"><i style="width:84%"></i></div>
+      </div>
+
+      <div class="card idea">
+        <div class="top"><span class="id">0005</span><h3>生殖・ケアのタブー領域</h3><span class="tier A">A</span></div>
+        <p class="one">出生率低下と高齢化という確実な未来で、参入の薄い領域を握る。</p>
+        <dl>
+          <dt>必要性</dt><dd>人口動態は最も予測可能。人口維持とケア需要が巨大化。</dd>
+          <dt>評価ギャップ</dt><dd>タブー＋低ステータスで参入が薄い。</dd>
+          <dt>所有</dt><dd>弱点は捕捉可能性——広く規制が重い。狭い関所の設計が鍵。</dd>
+        </dl>
+        <div class="bar"><i style="width:84%"></i></div>
+      </div>
+
+      <div class="card idea">
+        <div class="top"><span class="id">0004</span><h3>来歴・真正性インフラ</h3><span class="tier A">A</span></div>
+        <p class="one">偽造可能な世界で「本物である証明」を担う関所インフラ。</p>
+        <dl>
+          <dt>必要性</dt><dd>合成コンテンツ氾濫は不可逆、信頼への需要は定数。</dd>
+          <dt>評価ギャップ</dt><dd>早すぎる。狙いは規格未確定の横断検証／人間性の証明。</dd>
+          <dt>所有</dt><dd>関所（検証プロトコル・規格）＋地主＋知。標準を取れば強い堀。</dd>
+        </dl>
+        <div class="bar"><i style="width:83%"></i></div>
+      </div>
+
+      <div class="card idea">
+        <div class="top"><span class="id">0001</span><h3>リン回収・栄養塩循環</h3><span class="tier A">A</span></div>
+        <p class="one">尽きゆくリンを廃水・廃棄物から回収する「栄養塩の都市鉱山」。</p>
+        <dl>
+          <dt>必要性</dt><dd>リンは生命に必須・代替不能、可採年数75〜100年。</dd>
+          <dt>評価ギャップ</dt><dd>退屈ゆえ過小評価。回収を促す取り組みもまだ少ない。</dd>
+          <dt>所有</dt><dd>鉱山（回収可能ストック・回収権）＋つるはし（回収技術特許）。</dd>
+        </dl>
+        <div class="bar"><i style="width:81%"></i></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="signals">
+    <h2><span class="num">07</span>シグナル・ログ</h2>
+    <p class="sec-lead">世界中から拾った「弱いシグナル」の蓄積。まだ誰も騒いでいない兆しほど価値がある。</p>
+    <div class="scorewrap">
+    <table>
+      <thead><tr><th>日付</th><th>ドメイン</th><th>シグナル</th><th>なぜ重要か</th></tr></thead>
+      <tbody>
+        <tr><td class="num">2026-05-28</td><td>F 食農</td><td>リン可採年数75〜100年、ピーク2030年頃。代替不能だが回収可能、取り組みは少ない</td><td>食料に不可欠なのに退屈で過小評価。回収側に参入余地</td></tr>
+        <tr><td class="num">2026-05-28</td><td>D 記憶</td><td>DNAストレージは10¹⁹ bits/cm³、適切保存で数百万年。書き込みは高コスト</td><td>「腐らない媒体」需要は構造的だが市場未成熟＝早すぎて安い</td></tr>
+        <tr><td class="num">2026-05-28</td><td>A/B 熱・計算</td><td>AIデータセンターの電力需要急増、冷却・電力が制約に</td><td>計算の制約は電力と熱へ。廃熱・冷却・熱貯蔵に評価余地</td></tr>
+        <tr><td class="num">2026-05-28</td><td>C/K 信頼</td><td>主要機関のメガトレンド観でも視野は数十年</td><td>100年視点は視野外＝構造的な評価ギャップ</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2><span class="num">08</span>出典・原則</h2>
+    <ul class="src">
+      <li><a href="https://www.scientificamerican.com/article/phosphorus-a-looming-crisis/">Scientific American — Phosphorus: A Looming Crisis</a></li>
+      <li><a href="https://www.nationalgeographic.com/science/article/farmers-are-facing-a-phosphorus-crisis-the-solution-starts-with-soil">National Geographic — Farmers are facing a phosphorus crisis</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10296570/">NCBI — DNA Data Storage</a></li>
+      <li><a href="https://www.blackrock.com/sg/en/investment-strategies/megatrends-and-thematic-investing">BlackRock — Megatrends &amp; Thematic Investing</a></li>
+      <li><a href="https://www.morganstanley.com/Themes/megatrends-future-investment-trends">Morgan Stanley — Megatrends</a></li>
+    </ul>
+    <div class="callout" style="margin-top:18px">
+      <b>原則</b>：早すぎることは間違いと区別がつかない／流行（10年）と必然（100年）を混同しない／正しいだけでは儲からない、所有できるボトルネックまで降りる／退屈・タブー・低ステータスを見くだすな／反証を歓迎する。
+    </div>
+    <p class="meta" style="margin-top:18px">注：初回リサーチの数値は二次情報ベースの初期メモ。布石を打つ前に一次情報での裏取りが必要（運用ループの「反証・更新」）。</p>
+  </section>
+
+</main>
+
+<footer>
+  In 100 Years — 100年後リサーチ ／ 視点年：約2125年 ／ 生成日：2026-05-28<br>
+  詳細は各 Markdown ドキュメント（<code>docs/</code>・<code>research/</code>）を参照。
+</footer>
+
+</body>
+</html>
