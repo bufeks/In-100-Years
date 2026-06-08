@@ -98,6 +98,17 @@
   .bar{height:7px; border-radius:999px; background:#eceef5; overflow:hidden; margin-top:12px}
   .bar > i{display:block; height:100%; background:linear-gradient(90deg,var(--accent2),var(--accent))}
 
+  /* players */
+  .player{border-top:4px solid var(--accent)}
+  .player .id{font-size:13px; color:var(--muted); font-weight:700; font-variant-numeric:tabular-nums}
+  .player h3{margin:.2em 0 .6em}
+  .player .role{font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent2); margin-top:.6em}
+  .player .role.demand{color:#9a3412}
+  .player .role.gap{color:#7c2d12}
+  .player p.who{margin:.15em 0 .25em; font-size:14px}
+  .player .gap-line{margin-top:.6em; font-size:13.5px; background:#fff7ed; border:1px solid #fcd9a8;
+    border-radius:8px; padding:8px 10px; color:#7c2d12}
+
   .callout{background:#fff7ed; border:1px solid #fcd9a8; border-radius:12px; padding:14px 18px; color:#7c4a03}
   .changelog{background:#eef9f4; border:1px solid #bde5d3; border-radius:14px; padding:18px 20px; color:#0f5132}
   .changelog h3{margin:0 0 8px; color:#065f46}
@@ -121,6 +132,8 @@
   <a href="#trends">メガトレンド</a>
   <a href="#scoreboard">スコアボード</a>
   <a href="#ideas">アイデア</a>
+  <a href="#players">兆し</a>
+  <a href="#watchlist">退屈</a>
   <a href="#signals">シグナル</a>
   <a href="#sources">出典</a>
 </div></nav>
@@ -143,16 +156,19 @@
 
   <section id="changelog">
     <h2><span class="num">00</span>更新サマリ <span class="new">2026-06-08</span></h2>
-    <p class="sec-lead">最新の世界の情報を取り込み、シグナル・スコア・新規候補を更新。重要なのは「窓が閉じつつあるテーマ」と「新たに浮上した候補」。</p>
+    <p class="sec-lead">最新の世界の情報を取り込み、シグナル・スコア・新規候補を更新。今回は「現に動いている企業」と「需要側で兆しがある企業」も整理（→ <a href="#players">07 兆し</a>）。</p>
     <div class="changelog">
       <h3>主要な変化</h3>
       <ul>
-        <li><b>0002 超長期アーカイブ</b> — Atlas Data Storage が世界初の商用スケーラブルDNAストレージ「Atlas Eon 100」を公開（2025/12、$155M調達）。Catalog→Biomemory買収。市場CAGR <b>86.8%</b>。<b>「早すぎる」窓は急速に閉じつつある＝行動は今</b>。</li>
-        <li><b>0004 来歴・真正性</b> — EU AI Act <b>2026/8 施行</b>で透明性ラベル義務化。Samsung Galaxy S25／Google Pixel 10 がC2PAをネイティブ署名。ディープフェイク事案 50万→800万（+900%）。規格はC2PAに収束、空白は<b>「配信で剥がれた後の再構築・検証」</b>へ移動。</li>
-        <li><b>0003 廃熱経済</b> — ドイツのエネルギー効率法が <b>2026年熱再利用率10%を義務化</b>。EU Data Center Energy Efficiency Package 2026〜運用。狙いは<b>長時間・季節間貯蔵</b>。</li>
-        <li><b>0005 生殖・ケア</b> — 韓国 TFR <b>0.72</b>、置換水準割れは<b>136か国</b>、韓国は$270B投じて反転せず＝「政策では戻せない」が実証されつつあり、需要側の不可避性は更に上昇。</li>
-        <li><b>0001 リン回収</b> — ストルバイト系徐放性肥料市場 $265M→$933M(2036)、CAGR <b>13.4%</b>。離陸前夜、ボトルネックは「規模化」へ移動。</li>
-        <li><b>新規 0006 クリティカルミネラル循環</b> — Redwood Materials の回収率 <b>95%超</b>、精錬上位3か国の集中度 82%→<b>86%</b>。回収主流は織り込み気味だが、<b>回収権と純度規格は空白</b>。</li>
+        <li><b>0002 超長期アーカイブ</b> — Atlas Data Storage の商用化（$155M／In-Q-Tel出資）、<b>Scality × Biomemory が150年DNAアーカイブを2026/6/2発表</b>。窓は急速に閉じつつある＝行動は今。</li>
+        <li><b>0004 来歴・真正性</b> — EU AI Act <b>2026/8 施行</b>、Samsung S25／Pixel 10 のC2PAネイティブ署名、<b>Adobe が Content Authenticity for Enterprise を提供開始</b>。ディープフェイク+900%。</li>
+        <li><b>0003 廃熱経済</b> — <b>Microsoft × Fortum が25万人分地域暖房の40%</b>、Meta(Odense)1.1万世帯、Equinix(Paris PA10)1000戸。独/EUの規制が触媒。</li>
+        <li><b>0005 生殖・ケア</b> — 韓国 TFR <b>0.72</b>、<b>Kindbody が300万人カバー雇用主パイロット</b>、Diligent Robotics 米10病院＋。需要は企業福利厚生経由で形成。</li>
+        <li><b>0001 リン回収</b> — 市場CAGR 13.4%、<b>Ostara × ACWA が英国水道会社へ展開</b>、Amersfoort 年900トン。離陸前夜。</li>
+        <li><b>新規 0006 クリティカルミネラル循環</b> — <b>Redwood Materials が VW／BMW／Toyota／Volvo／Panasonic／Lyft と提携</b>、回収率95%超、精錬集中度86%。</li>
+        <li><b>新規 0008 死後ケア・葬儀インフラ</b>（81点・A）— グローバル <b>$147B → 2030 $209.6B</b>、SCI 1,400拠点・$4B、米死亡 <b>3.1M(2026)</b>。「退屈 × 人口動態確実 × 地域寡占」の本命。</li>
+        <li><b>新規 0007 親密性・孤独経済</b>（74点・A）— アダルト市場 <b>$67–100B</b>、AI伴侶セグメント年成長 <b>+40%</b>。最強クラスのタブー＝評価ギャップ、捕捉性が弱点（決済・規制依存）。</li>
+        <li><b>退屈ウォッチリスト B01–B12</b> — 害虫管理、産業廃棄物、種苗、公証、計量校正、配管、業務洗濯、灌漑、ベアリング、建材リサイクル、自宅改修等を「監視中の素材」として追加（→ <a href="#watchlist">退屈</a>）。</li>
       </ul>
     </div>
   </section>
@@ -260,7 +276,9 @@
         <tr><td class="num">0005</td><td>生殖・ケア</td><td>I/J 人口</td><td class="num">5</td><td class="num">5</td><td class="num">2</td><td class="num score">84</td><td class="num"><span class="tier A">A</span></td></tr>
         <tr><td class="num">0004</td><td>来歴・真正性インフラ</td><td>C 信頼</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num score">83</td><td class="num"><span class="tier A">A</span></td></tr>
         <tr><td class="num">0001</td><td>リン回収・栄養塩循環</td><td>F 食農</td><td class="num">5</td><td class="num">4</td><td class="num">3</td><td class="num score">81</td><td class="num"><span class="tier A">A</span></td></tr>
-        <tr class="fresh"><td class="num">0006</td><td>クリティカルミネラル循環</td><td>H 材料</td><td class="num">5</td><td class="num">3</td><td class="num">3</td><td class="num score">80</td><td class="num"><span class="tier A">A</span></td></tr>
+        <tr class="fresh"><td class="num">0008</td><td>死後ケア・葬儀</td><td>J 高齢化</td><td class="num">5</td><td class="num">3</td><td class="num">4</td><td class="num score">81</td><td class="num"><span class="tier A">A</span></td></tr>
+        <tr><td class="num">0006</td><td>クリティカルミネラル循環</td><td>H 材料</td><td class="num">5</td><td class="num">3</td><td class="num">3</td><td class="num score">80</td><td class="num"><span class="tier A">A</span></td></tr>
+        <tr class="fresh"><td class="num">0007</td><td>親密性・孤独経済</td><td>L 意味</td><td class="num">4</td><td class="num">5</td><td class="num">2</td><td class="num score">74</td><td class="num"><span class="tier A">A</span></td></tr>
       </tbody>
     </table>
     </div>
@@ -269,7 +287,7 @@
 
   <section id="ideas">
     <h2><span class="num">06</span>採点済みアイデア</h2>
-    <p class="sec-lead">6件の有望テーマ候補。各カードは「一言／なぜ必要か／なぜ安いか／所有の置き場所」を要約。黄色の枠は 2026-06-08 の最新シグナルによる更新メモ。</p>
+    <p class="sec-lead">8件の有望テーマ候補（うち新規 <b>0008 死後ケア</b>・<b>0007 親密性経済</b> は 2026-06-08 追加）。各カードは「一言／なぜ必要か／なぜ安いか／所有の置き場所」を要約。黄色の枠は最新シグナルによる更新メモ。</p>
     <div class="grid cols-2">
 
       <div class="card idea">
@@ -280,7 +298,7 @@
           <dt>評価ギャップ</dt><dd>早すぎ＋不可視。DNAストレージ（10¹⁹ bits/cm³）。</dd>
           <dt>所有</dt><dd>つるはし（装置・素材）＋関所（解読規格）＋知（特許）。</dd>
         </dl>
-        <div class="upd">📡 <b>2026-06-08</b>：Atlas Data Storage が「Atlas Eon 100」公開、$155M調達。Catalog→Biomemory買収。市場CAGR 86.8%。<b>窓は急速に閉じつつある＝行動は今</b>。</div>
+        <div class="upd">📡 <b>2026-06-08</b>：Atlas Data Storage が「Atlas Eon 100」公開、$155M調達。Scality × Biomemory で150年DNAアーカイブ。<b>窓は急速に閉じつつある＝行動は今</b>。</div>
         <div class="bar"><i style="width:85%"></i></div>
       </div>
 
@@ -292,7 +310,7 @@
           <dt>評価ギャップ</dt><dd>地味。冷却は織り込み気味、長時間・季節間貯蔵が空白。</dd>
           <dt>所有</dt><dd>つるはし（熱貯蔵材料・変換装置）＋鉱山（廃熱源の立地）。</dd>
         </dl>
-        <div class="upd">📡 <b>2026-06-08</b>：独エネルギー効率法が2026年熱再利用率<b>10%義務化</b>、EU パッケージ運用開始。需要が制度で顕在化。</div>
+        <div class="upd">📡 <b>2026-06-08</b>：Microsoft×Fortum で <b>25万人分の地域暖房40%</b>、Meta(Odense) 1.1万世帯、独エネルギー効率法 <b>10%義務化</b>。</div>
         <div class="bar"><i style="width:84%"></i></div>
       </div>
 
@@ -304,7 +322,7 @@
           <dt>評価ギャップ</dt><dd>タブー＋低ステータスで参入が薄い。</dd>
           <dt>所有</dt><dd>弱点は捕捉可能性——広く規制が重い。狭い関所の設計が鍵。</dd>
         </dl>
-        <div class="upd">📡 <b>2026-06-08</b>：韓国TFR <b>0.72</b>、置換水準割れ<b>136か国</b>。韓国は$270B投じても反転せず＝「政策では戻せない」が実証されつつある。</div>
+        <div class="upd">📡 <b>2026-06-08</b>：韓国TFR <b>0.72</b>、$270B投じても反転せず。<b>Kindbody が300万人カバー雇用主パイロット</b>、Diligent Robotics 米10病院＋。</div>
         <div class="bar"><i style="width:84%"></i></div>
       </div>
 
@@ -316,7 +334,7 @@
           <dt>評価ギャップ</dt><dd>規格はC2PAに収束。空白は「配信で剥がれた後の再構築・検証」。</dd>
           <dt>所有</dt><dd>関所（検証プロトコル・規格）＋地主＋知。</dd>
         </dl>
-        <div class="upd">📡 <b>2026-06-08</b>：EU AI Act <b>2026/8施行</b>で透明性ラベル義務化。Samsung S25／Pixel 10がC2PAネイティブ。ディープフェイク <b>+900%</b>。</div>
+        <div class="upd">📡 <b>2026-06-08</b>：EU AI Act <b>2026/8施行</b>、<b>Adobe が Content Authenticity for Enterprise 提供開始</b>、Samsung S25／Pixel 10 ネイティブ署名、ディープフェイク <b>+900%</b>。</div>
         <div class="bar"><i style="width:83%"></i></div>
       </div>
 
@@ -328,7 +346,19 @@
           <dt>評価ギャップ</dt><dd>退屈ゆえ過小評価。回収を促す取り組みも少ない。</dd>
           <dt>所有</dt><dd>鉱山（回収可能ストック・回収権）＋つるはし（回収技術特許）。</dd>
         </dl>
-        <div class="upd">📡 <b>2026-06-08</b>：ストルバイト系徐放性肥料市場 $265M→$933M(2036), CAGR <b>13.4%</b>。離陸前夜。ボトルネックは「規模化」へ。</div>
+        <div class="upd">📡 <b>2026-06-08</b>：市場 CAGR <b>13.4%</b>。<b>Ostara × ACWA で英国水道会社へ展開</b>、オランダ Amersfoort で年900トン。</div>
+        <div class="bar"><i style="width:81%"></i></div>
+      </div>
+
+      <div class="card idea">
+        <div class="top"><span class="id">0008</span><h3>死後ケア・葬儀 <span class="new">NEW</span></h3><span class="tier A">A</span></div>
+        <p class="one">退屈 × 人口動態の確実性 × 地域寡占の堀——SCI が示してきた「死亡率の上昇に乗る」ビジネス。</p>
+        <dl>
+          <dt>必要性</dt><dd>米死亡 3.1M(2026)、グローバル $147B → 2030 $209.6B、CAGR 6.1%。</dd>
+          <dt>評価ギャップ</dt><dd>PE は知っているが、サブセグメント（火葬テック・デジタル遺品・葬儀IT）は未成熟。個人投資家視野外。</dd>
+          <dt>所有</dt><dd>地主（地域寡占）＋関所（許認可）＋つるはし（火葬／メモリアルテック）。</dd>
+        </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：<b>SCI</b> 1,400拠点・$4B、2026年に M&amp;A <b>$75–125M 計画</b>。米葬儀ホームの80%が家族経営＝**ロールアップ余地大**。</div>
         <div class="bar"><i style="width:81%"></i></div>
       </div>
 
@@ -340,29 +370,148 @@
           <dt>評価ギャップ</dt><dd>主流の電池リサイクルは織り込み気味。<b>回収権・純度規格</b>は空白。</dd>
           <dt>所有</dt><dd>鉱山（回収可能ストックへのアクセス権）＋つるはし＋関所（規格）。</dd>
         </dl>
-        <div class="upd">📡 <b>2026-06-08</b>：Redwood 回収率<b>95%超</b>、リサイクルNiは新規より20–30%安。精錬上位3国の集中度 82%→<b>86%</b>。Cuリサイクル比率は37%→33%へ低下。</div>
+        <div class="upd">📡 <b>2026-06-08</b>：<b>Redwood Materials が VW／BMW／Toyota／Volvo／Panasonic／Lyft と提携</b>。回収率95%超。精錬上位3国の集中度 82%→<b>86%</b>。</div>
         <div class="bar"><i style="width:80%"></i></div>
       </div>
 
+      <div class="card idea">
+        <div class="top"><span class="id">0007</span><h3>親密性・孤独経済 <span class="new">NEW</span></h3><span class="tier A">A</span></div>
+        <p class="one">人口減・単身化・孤独の時代に、人間の親密性需要を担う産業（性風俗から AI伴侶まで）の、機関投資家が触らない一角。</p>
+        <dl>
+          <dt>必要性</dt><dd>性・親密性・つながりは人間性の定数。人口縮小と孤独の医療化が需要を拡大。</dd>
+          <dt>評価ギャップ</dt><dd>最強クラスのタブー、機関投資家・ESG が触らない。AI伴侶セグメントは規格未確立。</dd>
+          <dt>所有</dt><dd>周辺インフラで握る：つるはし（年齢確認／合意検証／決済）＋関所（規格・認証）。直接コンテンツは堀が弱い。</dd>
+        </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：アダルト市場 <b>$67–100B(2026)</b>、AI伴侶セグメント <b>年成長 +40%</b>（Candy AI／CrushOn AI／Replika系）。OnlyFans/Fansly のクリエイター直販が業界収入の25–30%。OnlyFans 推定 $56M → $1B（COVIDで18倍）。</div>
+        <div class="bar"><i style="width:74%"></i></div>
+      </div>
+
+    </div>
+
+    <h3 id="watchlist" style="margin-top:32px">退屈ウォッチリスト（B01–B12）<span class="new">NEW</span></h3>
+    <p class="sec-lead">「退屈／低ステータス」は評価ギャップの最強の隠れ場所。次は監視中の素材集——シグナルが揃ったものだけ 0xxx へ昇格する。</p>
+    <div class="grid cols-3" style="gap:12px">
+      <div class="card" style="padding:14px 16px"><strong>B01 葬儀DX周辺</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">火葬テック／デジタル遺品／追悼の永続化。0008 の派生。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B02 害虫・防除（PCO）</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">気候温暖化で害虫北上＋通年化。地域独占・ルート密度経済（Rentokil／Rollins 系）。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B03 産業廃棄物・畜産糞尿</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">0001 リン回収の入口。最大級の退屈＋規制が直接の引き金。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B04 種苗・遺伝資源バンク</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">気候適応の「種の保険」。公的中心だが民間で握れる関所が存在。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B05 公証・記録の永続化</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">0002＋0004 の交差。100年単位で「残っていること」が価値に。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B06 計量・校正・測定の認証</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">AIエージェント経済で「物理世界の真実値の保証」が希少化。SGS／Bureau Veritas 系。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B07 配管・水道修繕</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">先進国インフラの大規模更新サイクル＋気候適応で水管理需要拡大。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B08 業務用洗濯・衛生</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">高齢化＋医療施設拡大、感染管理、リセッション耐性。地域寡占。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B09 灌漑・水利権</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">水ストレス構造化、点滴灌漑、水利権そのものの長期保有。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B10 ベアリング・潤滑油</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">徹底的に地味な産業消耗品。電化・自動化で絶対量は単調増。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B11 建材リサイクル・解体</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">0006 都市鉱山の派生。CO2 規制と循環義務化の方向。</p></div>
+      <div class="card" style="padding:14px 16px"><strong>B12 高齢者向け自宅改修</strong><p style="margin:.3em 0 0;font-size:13.5px;color:var(--muted)">「自宅で老いる」志向。地域施工網のロールアップ＋見守りPF。</p></div>
+    </div>
+    <p class="meta" style="margin-top:14px">昇格条件：①不可避性の根拠が明示できた ②評価ギャップが言語化できた ③所有の置き場所が1つ以上特定できた ④シグナル2件以上蓄積——のいずれかが満たされたら 0xxx に格上げして7軸採点。</p>
+  </section>
+
+  <section id="players">
+    <h2><span class="num">07</span>兆し — 動いている企業と需要 <span class="new">NEW</span></h2>
+    <p class="sec-lead">各テーマで、すでに対応を始めている企業（供給側）と需要が見え始めている企業／顧客（需要側）。リサーチの目的は「どの椅子がまだ空いているか」を見極めること。</p>
+    <div class="grid cols-2">
+
+      <div class="card player">
+        <span class="id">0001</span>
+        <h3>リン回収・栄養塩循環</h3>
+        <div class="role">供給側</div>
+        <p class="who"><b>Ostara Nutrient Recovery Technologies</b>（Vancouver）— Pearl技術／Crystal Green肥料。オランダ Amersfoort で年900トン稼働。<b>英 ACWA Services と水道会社向け契約</b>。／欧州の下水処理組合。</p>
+        <div class="role demand">需要側</div>
+        <p class="who">肥料商社（Crystal Green は商業流通）／栄養塩排出規制を持つ自治体。</p>
+        <div class="gap-line"><b>空きの椅子</b>：規模化の専門商社、回収プラント長期キャピタル、回収後の規格・認証、農地ベースの長期契約。</div>
+      </div>
+
+      <div class="card player">
+        <span class="id">0002</span>
+        <h3>超長期アーカイブ（DNA）</h3>
+        <div class="role">供給側</div>
+        <p class="who"><b>Atlas Data Storage</b>（Twist Bioscience スピンアウト、$155M／In-Q-Tel 出資）／<b>Biomemory</b>（Catalog買収、2H 2026 商用ローンチ）／Microsoft Silica（ガラス、自社用途）。</p>
+        <div class="role demand">需要側 / パートナー</div>
+        <p class="who"><b>Scality × Biomemory</b> 提携で150年DNAアーカイブを S3互換で提供（2026/6/2）／In-Q-Tel 出資→<b>米情報機関</b>／クラウドのコールド層／大学・公文書館。</p>
+        <div class="gap-line"><b>空きの椅子</b>：解読規格、トレーサビリティ規格、専用書き込み/読取装置、エンタープライズ統合層、長期保管サービス契約。</div>
+      </div>
+
+      <div class="card player">
+        <span class="id">0003</span>
+        <h3>廃熱経済</h3>
+        <div class="role">供給側</div>
+        <p class="who"><b>Microsoft × Fortum</b>（フィンランド：25万人分の地域暖房40%、2026稼働）／<b>Meta</b>（Odense：1.1万世帯）／<b>Equinix</b>（Paris PA10：年1万MWh／1000戸、Markham District Energy と提携）／<b>Microsoft Høje-Taastrup</b>（6000戸予定）／<b>THUNDER</b>（季節熱化学貯蔵）。</p>
+        <div class="role demand">需要側</div>
+        <p class="who">北欧の地域暖房ネットワーク（Fortum など）／ドイツ自治体（10%義務化）／EU 全域（Data Center Energy Efficiency Package）。</p>
+        <div class="gap-line"><b>空きの椅子</b>：長時間・季節間熱貯蔵材料、低品位熱の変換装置、ハイパースケーラと自治体／DH事業者を結ぶ仲介層、認証スキーム。</div>
+      </div>
+
+      <div class="card player">
+        <span class="id">0004</span>
+        <h3>来歴・真正性インフラ</h3>
+        <div class="role">供給側</div>
+        <p class="who"><b>Adobe</b>（Content Authenticity for Enterprise）／<b>Truepic</b>／<b>C2PA連合</b>：Adobe・Amazon・BBC・Google・Intel・Meta・Microsoft・OpenAI・Publicis・Sony・Truepic／<b>ネイティブ署名ハード</b>：Leica／Nikon／Canon／Samsung S25／Pixel 10／<b>配信</b>：Cloudflare／LinkedIn／TikTok。</p>
+        <div class="role demand">需要側</div>
+        <p class="who">報道（Reuters／AP／BBC／NYTimes）／政府・クリティカルインフラ（CISA推奨）／<b>EU AI Act 対応が必要な全AI企業</b>（2026/8〜）。</p>
+        <div class="gap-line"><b>空きの椅子</b>：配信で剥がれたメタデータの<b>再構築・検証</b>レイヤー、人間性証明、規格未確定のニッチ業界（保険・医療画像・法廷映像）。</div>
+      </div>
+
+      <div class="card player">
+        <span class="id">0005</span>
+        <h3>生殖・ケアのタブー領域</h3>
+        <div class="role">供給側</div>
+        <p class="who"><b>Kindbody</b>（次世代不妊治療プラットフォーム、雇用主パイロット 300万人カバー）／<b>Carrot Fertility</b>／<b>Diligent Robotics</b>（Moxi、米10病院＋）／<b>Labrador Systems</b>（高齢者宅向け）／<b>Toyota</b>（介護ロボット研究）。</p>
+        <div class="role demand">需要側</div>
+        <p class="who">大手雇用主（福利厚生に組み込む流れ）／病院・介護施設（人手不足）／公的保険／介護ロボット市場 <b>$3.4B→$3.9B</b>（2025→2026）。</p>
+        <div class="gap-line"><b>空きの椅子</b>：規制の緩い地域での先行サービス、雇用主×医療を結ぶ仲介、ケア×AI（認知支援・見守り）の関所、保険商品。</div>
+      </div>
+
+      <div class="card player">
+        <span class="id">0006</span>
+        <h3>クリティカルミネラル循環</h3>
+        <div class="role">供給側</div>
+        <p class="who"><b>Redwood Materials</b>（Li ≥80%、Ni/Co/Cu ≥95%）／<b>Cirba Solutions</b>（北米7拠点、DOE資金）／<b>Li-Cycle</b>（年8.1万トン目標）／<b>ACE Green Recycling</b>（Texas、鉛蓄電池）／Call2Recycle／American Battery Technology Company。</p>
+        <div class="role demand">需要側</div>
+        <p class="who"><b>EVのOEM一斉契約</b>：VW／BMW NA／Volvo／Toyota／Panasonic／Ultium Cells／Lyft／Southern Company（電力）／DOE資金（Glencore に $475M）。</p>
+        <div class="gap-line"><b>空きの椅子</b>：純度・トレーサビリティ規格、特定金属（希土類）の超高純度回収、地域回収網、廃車・電子機器・建材ストックへの長期アクセス権。</div>
+      </div>
+
+    </div>
+
+    <h3 style="margin-top:24px">横断的な観察</h3>
+    <div class="scorewrap">
+    <table>
+      <thead><tr><th>テーマ</th><th>フェーズ</th><th>動きの主役</th><th class="num">緊急度</th></tr></thead>
+      <tbody>
+        <tr><td>0002 アーカイブ</td><td><b>商用化が始まったばかり</b></td><td>Atlas／Biomemory／Scality／In-Q-Tel</td><td class="num"><b>高</b>（窓が閉じつつある）</td></tr>
+        <tr><td>0004 来歴</td><td><b>規格収束＋規制施行直前</b></td><td>Adobe／C2PA連合／EU AI Act</td><td class="num"><b>高</b></td></tr>
+        <tr><td>0003 廃熱</td><td>規制が需要を顕在化</td><td>Microsoft/Fortum／Meta／Equinix／独政府</td><td class="num">中</td></tr>
+        <tr><td>0006 都市鉱山</td><td>主流は自動車OEMで形成</td><td>Redwood／Cirba／Li-Cycle</td><td class="num">中</td></tr>
+        <tr><td>0001 リン</td><td>市場が離陸前夜</td><td>Ostara／水道事業者</td><td class="num">中</td></tr>
+        <tr><td>0005 生殖・ケア</td><td>雇用主・病院経由で需要が形に</td><td>Kindbody／Diligent／Carrot</td><td class="num">中（捕捉性が弱点）</td></tr>
+      </tbody>
+    </table>
     </div>
   </section>
 
   <section id="signals">
-    <h2><span class="num">07</span>シグナル・ログ <span class="new">9件追加</span></h2>
+    <h2><span class="num">08</span>シグナル・ログ <span class="new">+15件</span></h2>
     <p class="sec-lead">世界中から拾った「弱いシグナル」の蓄積。新しい順。まだ誰も騒いでいない兆しほど価値がある。</p>
     <div class="scorewrap">
     <table>
       <thead><tr><th>日付</th><th>ドメイン</th><th>シグナル</th><th>なぜ重要か</th></tr></thead>
       <tbody>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>D 記憶</td><td>Atlas Data Storage が「Atlas Eon 100」公開（2025/12, $155M調達）。市場CAGR <b>86.8%</b>(2026–2034)</td><td>商用化フェーズに突入。「早すぎる」窓は閉じつつある＝行動は今</td></tr>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>D 記憶</td><td>Catalog → Biomemory 買収（2026/3）。Biomemory は2026年内にE2E商用ソリューション目標</td><td>業界統合が進行。規格を握れる時期は今</td></tr>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>C 信頼</td><td><b>EU AI Act 2026/8施行</b>で透明性ラベル義務化。Samsung S25／Pixel 10 がC2PAをネイティブ署名</td><td>規格はC2PA収束。配信中継でメタデータが剥がれる問題は未解決＝検証/再構築レイヤーが空白</td></tr>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>C 信頼</td><td>ディープフェイク事案：50万件(2023) → 800万件(2025), <b>+900%</b></td><td>検証需要は指数的に拡大。供給はまだ追いつかず</td></tr>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>A 熱</td><td>独エネルギー効率法が <b>2026年熱再利用率10%義務化</b>。EU DC Energy Efficiency Package 2026〜運用</td><td>廃熱回収が経済性判断から義務へ。需要が制度で顕在化</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>A 熱</td><td><b>Microsoft × Fortum</b> 新DC廃熱で<b>25万人分の地域暖房40%</b>供給、2026稼働。Meta(Odense)1.1万世帯、Equinix(Paris PA10)年1万MWh／1000戸、Microsoft(Høje-Taastrup)6000戸予定</td><td>ハイパースケーラの公共インフラ連携が具体的な数字で実装段階</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>D 記憶</td><td><b>Scality × Biomemory</b> 提携、<b>150年保存のDNAコールドアーカイブ</b>をエンタープライズに提供（2026/6/2）</td><td>DNAアーカイブが「研究」から「企業ITの一部」へ。早期需要層は政府・大規模クラウド</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>C 信頼</td><td><b>Adobe が Content Authenticity for Enterprise を提供開始</b>（GenStudio／Firefly／API）</td><td>真正性が「個人/ハード署名」から企業ワークフロー層へ拡大</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>H 材料</td><td><b>Redwood Materials</b> 提携先：VW／Panasonic／BMW NA／Ultium Cells／Southern Co／Volvo／Toyota／Lyft</td><td>自動車OEMが集中的に回収供給を契約。本流は織り込まれつつある</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>I 人口</td><td><b>Kindbody</b> 次世代プラットフォームを<b>300万人カバー</b>雇用主パイロットへ（2026/2）、2027全面展開予定。介護ロボット市場 $3.4B→$3.9B</td><td>需要は企業福利厚生経由で形成。Diligent Robotics は米10病院＋</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>F 食農</td><td><b>Ostara × ACWA Services</b> で英国水道会社向けにリン回収提供。Amersfoort年900トン稼働中</td><td>商用展開が「点」から「面」へ。実プラント運営の堀ができつつある</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>D 記憶</td><td>Atlas Data Storage（Twist スピンアウト）「Atlas Eon 100」公開（2025/12, $155M／<b>In-Q-Tel</b>）。市場CAGR <b>86.8%</b>(2026–2034)</td><td>商用化フェーズに突入。「早すぎる」窓は閉じつつある</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>D 記憶</td><td>Catalog → <b>Biomemory</b> 買収（2026/3）。Biomemory は 2H 2026 にE2E商用ローンチ予定</td><td>業界統合が進行。規格を握れる時期は今</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>C 信頼</td><td><b>EU AI Act 2026/8施行</b>で透明性ラベル義務化。Samsung S25／Pixel 10 が C2PA をネイティブ署名</td><td>規格はC2PA収束。配信中継でメタデータが剥がれる問題は未解決＝検証/再構築レイヤーが空白</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>C 信頼</td><td>ディープフェイク事案：50万件(2023) → 800万件(2025), <b>+900%</b></td><td>検証需要は指数的に拡大。供給は追いつかず</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>A 熱</td><td>独エネルギー効率法が <b>2026年熱再利用率10%義務化</b>。EU DC Energy Efficiency Package 2026〜運用</td><td>廃熱回収が経済性判断から義務へ</td></tr>
         <tr class="fresh"><td class="num">2026-06-08</td><td>A 熱</td><td>THUNDER：季節熱化学貯蔵×高温ヒートポンプ。DC電力620–1050 TWh(2026)、回収可能廃熱35–85 TWh</td><td>長時間・季節間の熱貯蔵は規格未確立＝関所候補</td></tr>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>I 人口</td><td>韓国TFR <b>0.72</b>、日本1.20、世界平均2.25、置換水準割れ<b>136か国</b>。韓国は$270B投じても反転せず</td><td>「政策で戻せない」が実証されつつある。需要側の不可避性は更に上昇</td></tr>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>F 食農</td><td>ストルバイト系徐放性Pi肥料市場 $265M→$933M(2036), CAGR <b>13.4%</b>。回収主流(40%)</td><td>離陸前夜。ボトルネックは「規模化」へ移動</td></tr>
-        <tr class="fresh"><td class="num">2026-06-08</td><td>H 材料</td><td>Redwood Materials：回収率<b>95%超</b>、リサイクルNiは新規より20–30%安。精錬上位3国集中度 82%→<b>86%</b>。Cuリサイクル比率37%→33%へ低下</td><td>主流は織り込み気味。回収権と純度規格は空白</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>I 人口</td><td>韓国TFR <b>0.72</b>、日本1.20、世界平均2.25、置換水準割れ<b>136か国</b>。韓国は$270B投じても反転せず</td><td>「政策で戻せない」が実証されつつある</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>F 食農</td><td>ストルバイト系徐放性Pi肥料市場 $265M→$933M(2036), CAGR <b>13.4%</b>。回収主流(40%)</td><td>離陸前夜。ボトルネックは「規模化」へ</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>H 材料</td><td>Redwood Ni/Co/Cu <b>回収率95%超</b>、リサイクルNiは新規より20–30%安。精錬上位3国集中度 82%→<b>86%</b>。Cuリサイクル比率37%→33%へ低下</td><td>主流は織り込み気味。回収権と純度規格は空白</td></tr>
         <tr><td class="num">2026-05-28</td><td>F 食農</td><td>リン可採年数75〜100年、ピーク2030年頃。代替不能だが回収可能、取り組みは少ない</td><td>食料に不可欠なのに退屈で過小評価</td></tr>
         <tr><td class="num">2026-05-28</td><td>D 記憶</td><td>DNAストレージは10¹⁹ bits/cm³、適切保存で数百万年。書き込みは高コスト</td><td>「腐らない媒体」需要は構造的だが市場未成熟＝早すぎて安い</td></tr>
         <tr><td class="num">2026-05-28</td><td>A/B 熱・計算</td><td>AIデータセンターの電力需要急増、冷却・電力が制約に</td><td>計算の制約は電力と熱へ</td></tr>
@@ -373,16 +522,41 @@
   </section>
 
   <section id="sources">
-    <h2><span class="num">08</span>出典・原則</h2>
-    <h3>2026-06-08 追加</h3>
+    <h2><span class="num">09</span>出典・原則</h2>
+    <h3>2026-06-08 退屈＋親密性（0008・0007）</h3>
     <ul class="src">
-      <li><a href="https://www.techradar.com/pro/after-nearly-10-years-twist-bioscience-spin-off-plans-terabyte-scale-dna-storage-in-2026-intending-to-store-13tb-of-data-in-a-single-drop-of-water">TechRadar — Twist スピンアウト Atlas Data Storage</a></li>
-      <li><a href="https://blog.linknovate.com/top-dna-data-storage-startups-in-2026-the-future-of-digital-memory/">Linknovate — Top DNA Data Storage Startups in 2026（Catalog → Biomemory）</a></li>
+      <li><a href="https://247wallst.com/investing/2025/07/20/u-s-leads-147-billion-global-deathcare-industry-as-private-equity-bets-on-digital-disruption/">24/7 Wall St. — $147B Deathcare Industry &amp; PE</a></li>
+      <li><a href="https://www.memorials.com/info/funeral-planning-guide/largest-funeral-home-companies">Memorials.com — Largest U.S. Funeral Home Companies (2026)</a></li>
+      <li><a href="https://grata.com/resources/death-services-pe-playbook">Grata — The PE Playbook: Death Services</a></li>
+      <li><a href="https://techsavycrew.com/blog/global-porn-industry-revenue/">TechSavyCrew — Global Adult Economy Revenue</a></li>
+      <li><a href="https://www.cognitivemarketresearch.com/online-adult-entertainment-market-report">Cognitive Market Research — Online Adult Entertainment Market</a></li>
+      <li><a href="https://www.scrile.com/blog/adult-content-monetization-trends">Scrile — Adult Content Monetization Trends 2026</a></li>
+    </ul>
+
+    <h3>2026-06-08 兆し（企業の動き）</h3>
+    <ul class="src">
+      <li><a href="https://blog.aquatherm.de/en/using-waste-heat-from-data-centres-turning-digital-heat-into-community-warmth">Aquatherm — Microsoft/Fortum、Meta、Equinix の廃熱再利用</a></li>
+      <li><a href="https://transformainsights.com/blog/harnessing-waste-heat-data-centres-community-heating">Transforma Insights — DC廃熱とコミュニティ暖房</a></li>
+      <li><a href="https://www.globenewswire.com/news-release/2026/06/02/3305126/0/en/scality-and-biomemory-partner-to-pioneer-ultra-secure-dna-based-data-archives-with-150-year-retention.html">GlobeNewswire — Scality × Biomemory 150年DNAアーカイブ</a></li>
+      <li><a href="https://www.hpcwire.com/bigdatawire/this-just-in/scality-and-biomemory-advance-dna-based-cold-storage-for-long-term-data-retention/">BigDATAwire — Scality &amp; Biomemory DNAコールドストレージ</a></li>
+      <li><a href="https://business.adobe.com/blog/content-authenticity-arrives-for-enterprises">Adobe — Content Authenticity for Enterprise</a></li>
+      <li><a href="https://contentauthenticity.org/how-it-works">Content Authenticity Initiative — How it works</a></li>
+      <li><a href="https://www.blackridgeresearch.com/blog/list-of-top-global-lithium-ion-li-ion-electric-vehicle-ev-battery-lib-closed-loop-recycling-services-companies-in-the-world">BlackridgeResearch — Top global Li-ion battery recycling companies</a></li>
+      <li><a href="https://evmagazine.com/top10/top-10-leaders-in-ev-circular-economy">EV Magazine — Leaders in EV circular economy</a></li>
+      <li><a href="https://www.prnewswire.com/news-releases/kindbody-unveils-next-generation-fertility-platform-to-improve-outcomes-accelerate-affordability-and-intelligence-in-reproductive-care-302685936.html">Kindbody — Next-gen fertility platform（PRNewswire）</a></li>
+      <li><a href="https://www.grandviewresearch.com/industry-analysis/elder-care-assistive-robots-market-report">Grand View Research — Elder Care Assistive Robots</a></li>
+      <li><a href="https://www.ostara.com/acwa-ostara-deal-to-offer-phosphorus-recovery-to-water-companies/">Ostara — ACWA との水道会社向け契約</a></li>
+      <li><a href="https://www.phosphorusplatform.eu/scope-in-print/news/1219-ostara-struvite-recovery-amersfoort">Phosphorus Platform — Ostara Amersfoort 900 t/y</a></li>
+    </ul>
+    <h3>2026-06-08 マーケット・規制</h3>
+    <ul class="src">
+      <li><a href="https://www.techradar.com/pro/after-nearly-10-years-twist-bioscience-spin-off-plans-terabyte-scale-dna-storage-in-2026-intending-to-store-13tb-of-data-in-a-single-drop-of-water">TechRadar — Atlas Data Storage</a></li>
+      <li><a href="https://blog.linknovate.com/top-dna-data-storage-startups-in-2026-the-future-of-digital-memory/">Linknovate — Top DNA Data Storage Startups 2026</a></li>
       <li><a href="https://www.eyesift.com/faq/c2pa-content-credentials-2026-cryptographic-provenance-adoption/">EyeSift — C2PA Adoption Status 2026</a></li>
       <li><a href="https://www.eyesift.com/ai-image-detection-2026-c2pa-content-credentials-synthid-watermarks-diffusion-fingerprints-deepfake/">EyeSift — C2PA Deepfake Detection 2026</a></li>
       <li><a href="https://truescreen.io/articles/c2pa-standard-history-limitations/">Truescreen — C2PA Standard in 2026</a></li>
-      <li><a href="https://www.araner.com/blog/data-center-waste-heat-recovery">Araner — Data Center Waste Heat Recovery</a></li>
-      <li><a href="https://www.enlit.world/library/seasonal-recovery-of-waste-heat-from-data-centres-with-thunder">Enlit — THUNDER（季節間DC廃熱回収）</a></li>
+      <li><a href="https://www.araner.com/blog/data-center-waste-heat-recovery">Araner — DC廃熱回収</a></li>
+      <li><a href="https://www.enlit.world/library/seasonal-recovery-of-waste-heat-from-data-centres-with-thunder">Enlit — THUNDER</a></li>
       <li><a href="https://www.irena.org/Innovation-landscape-for-smart-electrification/Power-to-heat-and-cooling/31-Waste-heat-recovery-from-data-centres">IRENA — Waste heat recovery from data centres</a></li>
       <li><a href="https://statisticstimes.com/demographics/countries-by-fertility-rate.php">Statistics Times — Countries by Fertility Rate 2026</a></li>
       <li><a href="https://www.japantimes.co.jp/commentary/2026/02/10/world/asias-falling-fertility-rates/">Japan Times — Asia's falling fertility rates</a></li>
@@ -409,7 +583,7 @@
 </main>
 
 <footer>
-  In 100 Years — 100年後リサーチ ／ 視点年：約2125年 ／ 最終更新：2026-06-08（初版 2026-05-28）<br>
+  In 100 Years — 100年後リサーチ ／ 視点年：約2125年 ／ 最終更新：2026-06-08（兆しスナップショット追加 ／ 初版 2026-05-28）<br>
   詳細は各 Markdown ドキュメント（<code>docs/</code>・<code>research/</code>）を参照。
 </footer>
 
