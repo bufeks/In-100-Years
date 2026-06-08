@@ -22,7 +22,6 @@
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
 
-  /* sticky nav */
   .nav{position:sticky; top:0; z-index:50; background:rgba(11,16,32,.92);
     backdrop-filter:blur(8px); border-bottom:1px solid rgba(255,255,255,.08)}
   .nav-inner{max-width:var(--maxw); margin:0 auto; padding:10px 20px;
@@ -31,10 +30,11 @@
   .nav a{color:#c7cde0; font-size:13.5px; white-space:nowrap}
   .nav a:hover{color:#fff; text-decoration:none}
 
-  /* hero */
   .hero{background:radial-gradient(1200px 500px at 70% -10%,#1e2a55 0,var(--bg) 55%); color:#eef1fb}
   .hero-inner{max-width:var(--maxw); margin:0 auto; padding:64px 20px 56px}
   .eyebrow{color:#8ea2ff; font-weight:700; letter-spacing:.18em; font-size:12.5px; text-transform:uppercase}
+  .updated{display:inline-block; margin-left:10px; background:#1f2a55; color:#ffd27a;
+    border:1px solid #ffd27a55; padding:2px 10px; border-radius:999px; font-size:11.5px; letter-spacing:.06em}
   .hero h1{font-size:clamp(30px,5vw,52px); line-height:1.15; margin:.35em 0 .25em; letter-spacing:.01em}
   .hero .lede{font-size:clamp(16px,2.2vw,20px); color:#c4cbe6; max-width:62ch; margin:0}
   .formula{margin-top:30px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
@@ -44,12 +44,13 @@
   .formula .sub{display:flex; gap:18px 28px; flex-wrap:wrap; margin-top:8px; color:#aab3d4; font-size:13px}
   .formula .sub span b{color:#9fe3df}
 
-  /* layout */
   main{max-width:var(--maxw); margin:0 auto; padding:8px 20px 80px}
   section{padding:46px 0 8px; border-top:1px solid var(--line)}
   section:first-of-type{border-top:0}
   h2{font-size:clamp(22px,3.4vw,30px); margin:.2em 0 .1em; letter-spacing:.01em}
   h2 .num{color:var(--accent); font-variant-numeric:tabular-nums; margin-right:.5ch}
+  h2 .new{display:inline-block; margin-left:10px; background:#fef3c7; color:#92400e;
+    border:1px solid #fcd34d; padding:1px 8px; border-radius:999px; font-size:12px; vertical-align:middle}
   .sec-lead{color:var(--muted); margin:.2em 0 1.4em; max-width:64ch}
   h3{font-size:18px; margin:1.6em 0 .4em}
 
@@ -71,8 +72,8 @@
   tbody tr:last-child td{border-bottom:0}
   td.num,th.num{text-align:center; font-variant-numeric:tabular-nums}
   .scorewrap{overflow-x:auto}
+  tbody tr.fresh td:first-child::before{content:"●"; color:var(--amber); margin-right:6px; font-size:12px}
 
-  /* tier badges */
   .tier{display:inline-block; min-width:26px; text-align:center; font-weight:800; font-size:12.5px;
     padding:2px 9px; border-radius:999px; color:#fff}
   .tier.S{background:linear-gradient(135deg,#e3b341,#b8860b)}
@@ -84,7 +85,6 @@
   .pill{display:inline-block; font-size:12px; color:var(--muted); background:#eef0f7;
     border:1px solid var(--line); border-radius:999px; padding:1px 10px; margin:0 4px 4px 0}
 
-  /* idea cards */
   .idea{position:relative}
   .idea .top{display:flex; align-items:center; gap:10px; margin-bottom:6px}
   .idea .id{font-variant-numeric:tabular-nums; color:var(--muted); font-weight:700; font-size:13px}
@@ -93,11 +93,17 @@
   .idea dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font-size:14px}
   .idea dt{color:var(--muted); white-space:nowrap}
   .idea dd{margin:0}
+  .idea .upd{margin-top:10px; font-size:13px; color:#92400e; background:#fffbeb;
+    border:1px dashed #fcd34d; border-radius:8px; padding:8px 10px}
   .bar{height:7px; border-radius:999px; background:#eceef5; overflow:hidden; margin-top:12px}
   .bar > i{display:block; height:100%; background:linear-gradient(90deg,var(--accent2),var(--accent))}
 
   .callout{background:#fff7ed; border:1px solid #fcd9a8; border-radius:12px; padding:14px 18px; color:#7c4a03}
-  .principles li{margin:.3em 0}
+  .changelog{background:#eef9f4; border:1px solid #bde5d3; border-radius:14px; padding:18px 20px; color:#0f5132}
+  .changelog h3{margin:0 0 8px; color:#065f46}
+  .changelog ul{margin:0 0 0 1.2em; padding:0}
+  .changelog li{margin:.25em 0}
+  .changelog b{color:#064e3b}
   footer{max-width:var(--maxw); margin:0 auto; padding:30px 20px 60px; color:var(--muted); font-size:13.5px; border-top:1px solid var(--line)}
   .src{font-size:13.5px}
   .src li{margin:.25em 0}
@@ -108,6 +114,7 @@
 
 <nav class="nav"><div class="nav-inner">
   <span class="brand">In 100 Years</span>
+  <a href="#changelog">更新</a>
   <a href="#method">方法論</a>
   <a href="#framework">評価フレーム</a>
   <a href="#domains">ドメイン</a>
@@ -119,7 +126,7 @@
 </div></nav>
 
 <header class="hero"><div class="hero-inner">
-  <div class="eyebrow">Research Repository · 約2125年を見据えて</div>
+  <div class="eyebrow">Research Repository · 約2125年を見据えて<span class="updated">UPDATED 2026-06-08</span></div>
   <h1>100年後に必要とされるのに、<br>いまは評価されていないもの。</h1>
   <p class="lede">世界中の情報から「ほぼ確実に来る未来 × いまは安い × 自分が握れる」地点を系統的に探す。早すぎる確信に所有を置き、長期の非対称なリターンを狙うためのリサーチ基盤。</p>
   <div class="formula">
@@ -133,6 +140,22 @@
 </div></header>
 
 <main>
+
+  <section id="changelog">
+    <h2><span class="num">00</span>更新サマリ <span class="new">2026-06-08</span></h2>
+    <p class="sec-lead">最新の世界の情報を取り込み、シグナル・スコア・新規候補を更新。重要なのは「窓が閉じつつあるテーマ」と「新たに浮上した候補」。</p>
+    <div class="changelog">
+      <h3>主要な変化</h3>
+      <ul>
+        <li><b>0002 超長期アーカイブ</b> — Atlas Data Storage が世界初の商用スケーラブルDNAストレージ「Atlas Eon 100」を公開（2025/12、$155M調達）。Catalog→Biomemory買収。市場CAGR <b>86.8%</b>。<b>「早すぎる」窓は急速に閉じつつある＝行動は今</b>。</li>
+        <li><b>0004 来歴・真正性</b> — EU AI Act <b>2026/8 施行</b>で透明性ラベル義務化。Samsung Galaxy S25／Google Pixel 10 がC2PAをネイティブ署名。ディープフェイク事案 50万→800万（+900%）。規格はC2PAに収束、空白は<b>「配信で剥がれた後の再構築・検証」</b>へ移動。</li>
+        <li><b>0003 廃熱経済</b> — ドイツのエネルギー効率法が <b>2026年熱再利用率10%を義務化</b>。EU Data Center Energy Efficiency Package 2026〜運用。狙いは<b>長時間・季節間貯蔵</b>。</li>
+        <li><b>0005 生殖・ケア</b> — 韓国 TFR <b>0.72</b>、置換水準割れは<b>136か国</b>、韓国は$270B投じて反転せず＝「政策では戻せない」が実証されつつあり、需要側の不可避性は更に上昇。</li>
+        <li><b>0001 リン回収</b> — ストルバイト系徐放性肥料市場 $265M→$933M(2036)、CAGR <b>13.4%</b>。離陸前夜、ボトルネックは「規模化」へ移動。</li>
+        <li><b>新規 0006 クリティカルミネラル循環</b> — Redwood Materials の回収率 <b>95%超</b>、精錬上位3か国の集中度 82%→<b>86%</b>。回収主流は織り込み気味だが、<b>回収権と純度規格は空白</b>。</li>
+      </ul>
+    </div>
+  </section>
 
   <section id="method">
     <h2><span class="num">01</span>方法論</h2>
@@ -222,8 +245,8 @@
   </section>
 
   <section id="scoreboard">
-    <h2><span class="num">05</span>スコアボード</h2>
-    <p class="sec-lead">初回の有望テーマ5件を7軸で採点（合成スコア降順）。いずれも折れない力に根ざし、退屈／タブー／早すぎで見過ごされている。分かれ目は<b>捕捉可能性</b>——「広く確実な需要」と「握れる所有」は別物。</p>
+    <h2><span class="num">05</span>スコアボード <span class="new">+0006</span></h2>
+    <p class="sec-lead">有望テーマを7軸で採点（合成スコア降順）。いずれも折れない力に根ざし、退屈／タブー／早すぎで見過ごされている。分かれ目は<b>捕捉可能性</b>——「広く確実な需要」と「握れる所有」は別物。<b>0002・0004 は評価ギャップが急速に縮小中＝行動の時期</b>。</p>
     <div class="scorewrap">
     <table>
       <thead><tr>
@@ -237,15 +260,16 @@
         <tr><td class="num">0005</td><td>生殖・ケア</td><td>I/J 人口</td><td class="num">5</td><td class="num">5</td><td class="num">2</td><td class="num score">84</td><td class="num"><span class="tier A">A</span></td></tr>
         <tr><td class="num">0004</td><td>来歴・真正性インフラ</td><td>C 信頼</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num score">83</td><td class="num"><span class="tier A">A</span></td></tr>
         <tr><td class="num">0001</td><td>リン回収・栄養塩循環</td><td>F 食農</td><td class="num">5</td><td class="num">4</td><td class="num">3</td><td class="num score">81</td><td class="num"><span class="tier A">A</span></td></tr>
+        <tr class="fresh"><td class="num">0006</td><td>クリティカルミネラル循環</td><td>H 材料</td><td class="num">5</td><td class="num">3</td><td class="num">3</td><td class="num score">80</td><td class="num"><span class="tier A">A</span></td></tr>
       </tbody>
     </table>
     </div>
-    <p class="meta">重み：不可避×4・時間×3・ギャップ×4・規模×3・捕捉×4・着手×1・非対称×1（満点100）</p>
+    <p class="meta">重み：不可避×4・時間×3・ギャップ×4・規模×3・捕捉×4・着手×1・非対称×1（満点100）／●＝2026-06-08 新規追加</p>
   </section>
 
   <section id="ideas">
     <h2><span class="num">06</span>採点済みアイデア</h2>
-    <p class="sec-lead">5件の有望テーマ候補。各カードは「一言／なぜ必要か／なぜ安いか／所有の置き場所」を要約。</p>
+    <p class="sec-lead">6件の有望テーマ候補。各カードは「一言／なぜ必要か／なぜ安いか／所有の置き場所」を要約。黄色の枠は 2026-06-08 の最新シグナルによる更新メモ。</p>
     <div class="grid cols-2">
 
       <div class="card idea">
@@ -253,9 +277,10 @@
         <p class="one">数百〜数千年劣化しない媒体に知識を刻む「文明のバックアップ」。</p>
         <dl>
           <dt>必要性</dt><dd>知識は指数増、デジタル媒体は数十年で腐る。AIが情報爆発を加速。</dd>
-          <dt>評価ギャップ</dt><dd>早すぎ＋不可視。DNAストレージ（10¹⁹ bits/cm³）は研究段階。</dd>
+          <dt>評価ギャップ</dt><dd>早すぎ＋不可視。DNAストレージ（10¹⁹ bits/cm³）。</dd>
           <dt>所有</dt><dd>つるはし（装置・素材）＋関所（解読規格）＋知（特許）。</dd>
         </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：Atlas Data Storage が「Atlas Eon 100」公開、$155M調達。Catalog→Biomemory買収。市場CAGR 86.8%。<b>窓は急速に閉じつつある＝行動は今</b>。</div>
         <div class="bar"><i style="width:85%"></i></div>
       </div>
 
@@ -264,9 +289,10 @@
         <p class="one">エネルギーが安くなるほど希少になる「廃熱の回収・貯蔵・輸送」。</p>
         <dl>
           <dt>必要性</dt><dd>熱力学＋計算/生活水準の上昇。熱は捨てるコストから資源へ。</dd>
-          <dt>評価ギャップ</dt><dd>地味。冷却は注目され始め、狙いは長時間・季節間の熱貯蔵。</dd>
+          <dt>評価ギャップ</dt><dd>地味。冷却は織り込み気味、長時間・季節間貯蔵が空白。</dd>
           <dt>所有</dt><dd>つるはし（熱貯蔵材料・変換装置）＋鉱山（廃熱源の立地）。</dd>
         </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：独エネルギー効率法が2026年熱再利用率<b>10%義務化</b>、EU パッケージ運用開始。需要が制度で顕在化。</div>
         <div class="bar"><i style="width:84%"></i></div>
       </div>
 
@@ -278,6 +304,7 @@
           <dt>評価ギャップ</dt><dd>タブー＋低ステータスで参入が薄い。</dd>
           <dt>所有</dt><dd>弱点は捕捉可能性——広く規制が重い。狭い関所の設計が鍵。</dd>
         </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：韓国TFR <b>0.72</b>、置換水準割れ<b>136か国</b>。韓国は$270B投じても反転せず＝「政策では戻せない」が実証されつつある。</div>
         <div class="bar"><i style="width:84%"></i></div>
       </div>
 
@@ -286,9 +313,10 @@
         <p class="one">偽造可能な世界で「本物である証明」を担う関所インフラ。</p>
         <dl>
           <dt>必要性</dt><dd>合成コンテンツ氾濫は不可逆、信頼への需要は定数。</dd>
-          <dt>評価ギャップ</dt><dd>早すぎる。狙いは規格未確定の横断検証／人間性の証明。</dd>
-          <dt>所有</dt><dd>関所（検証プロトコル・規格）＋地主＋知。標準を取れば強い堀。</dd>
+          <dt>評価ギャップ</dt><dd>規格はC2PAに収束。空白は「配信で剥がれた後の再構築・検証」。</dd>
+          <dt>所有</dt><dd>関所（検証プロトコル・規格）＋地主＋知。</dd>
         </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：EU AI Act <b>2026/8施行</b>で透明性ラベル義務化。Samsung S25／Pixel 10がC2PAネイティブ。ディープフェイク <b>+900%</b>。</div>
         <div class="bar"><i style="width:83%"></i></div>
       </div>
 
@@ -297,25 +325,47 @@
         <p class="one">尽きゆくリンを廃水・廃棄物から回収する「栄養塩の都市鉱山」。</p>
         <dl>
           <dt>必要性</dt><dd>リンは生命に必須・代替不能、可採年数75〜100年。</dd>
-          <dt>評価ギャップ</dt><dd>退屈ゆえ過小評価。回収を促す取り組みもまだ少ない。</dd>
+          <dt>評価ギャップ</dt><dd>退屈ゆえ過小評価。回収を促す取り組みも少ない。</dd>
           <dt>所有</dt><dd>鉱山（回収可能ストック・回収権）＋つるはし（回収技術特許）。</dd>
         </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：ストルバイト系徐放性肥料市場 $265M→$933M(2036), CAGR <b>13.4%</b>。離陸前夜。ボトルネックは「規模化」へ。</div>
         <div class="bar"><i style="width:81%"></i></div>
+      </div>
+
+      <div class="card idea">
+        <div class="top"><span class="id">0006</span><h3>クリティカルミネラル循環 <span class="new">NEW</span></h3><span class="tier A">A</span></div>
+        <p class="one">新規採掘の限界と地政学的集中の中で、廃棄ストックから戦略金属を回収する「都市鉱山」。</p>
+        <dl>
+          <dt>必要性</dt><dd>電化＋有限元素＋精錬集中の上昇（地政学リスク）。</dd>
+          <dt>評価ギャップ</dt><dd>主流の電池リサイクルは織り込み気味。<b>回収権・純度規格</b>は空白。</dd>
+          <dt>所有</dt><dd>鉱山（回収可能ストックへのアクセス権）＋つるはし＋関所（規格）。</dd>
+        </dl>
+        <div class="upd">📡 <b>2026-06-08</b>：Redwood 回収率<b>95%超</b>、リサイクルNiは新規より20–30%安。精錬上位3国の集中度 82%→<b>86%</b>。Cuリサイクル比率は37%→33%へ低下。</div>
+        <div class="bar"><i style="width:80%"></i></div>
       </div>
 
     </div>
   </section>
 
   <section id="signals">
-    <h2><span class="num">07</span>シグナル・ログ</h2>
-    <p class="sec-lead">世界中から拾った「弱いシグナル」の蓄積。まだ誰も騒いでいない兆しほど価値がある。</p>
+    <h2><span class="num">07</span>シグナル・ログ <span class="new">9件追加</span></h2>
+    <p class="sec-lead">世界中から拾った「弱いシグナル」の蓄積。新しい順。まだ誰も騒いでいない兆しほど価値がある。</p>
     <div class="scorewrap">
     <table>
       <thead><tr><th>日付</th><th>ドメイン</th><th>シグナル</th><th>なぜ重要か</th></tr></thead>
       <tbody>
-        <tr><td class="num">2026-05-28</td><td>F 食農</td><td>リン可採年数75〜100年、ピーク2030年頃。代替不能だが回収可能、取り組みは少ない</td><td>食料に不可欠なのに退屈で過小評価。回収側に参入余地</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>D 記憶</td><td>Atlas Data Storage が「Atlas Eon 100」公開（2025/12, $155M調達）。市場CAGR <b>86.8%</b>(2026–2034)</td><td>商用化フェーズに突入。「早すぎる」窓は閉じつつある＝行動は今</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>D 記憶</td><td>Catalog → Biomemory 買収（2026/3）。Biomemory は2026年内にE2E商用ソリューション目標</td><td>業界統合が進行。規格を握れる時期は今</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>C 信頼</td><td><b>EU AI Act 2026/8施行</b>で透明性ラベル義務化。Samsung S25／Pixel 10 がC2PAをネイティブ署名</td><td>規格はC2PA収束。配信中継でメタデータが剥がれる問題は未解決＝検証/再構築レイヤーが空白</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>C 信頼</td><td>ディープフェイク事案：50万件(2023) → 800万件(2025), <b>+900%</b></td><td>検証需要は指数的に拡大。供給はまだ追いつかず</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>A 熱</td><td>独エネルギー効率法が <b>2026年熱再利用率10%義務化</b>。EU DC Energy Efficiency Package 2026〜運用</td><td>廃熱回収が経済性判断から義務へ。需要が制度で顕在化</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>A 熱</td><td>THUNDER：季節熱化学貯蔵×高温ヒートポンプ。DC電力620–1050 TWh(2026)、回収可能廃熱35–85 TWh</td><td>長時間・季節間の熱貯蔵は規格未確立＝関所候補</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>I 人口</td><td>韓国TFR <b>0.72</b>、日本1.20、世界平均2.25、置換水準割れ<b>136か国</b>。韓国は$270B投じても反転せず</td><td>「政策で戻せない」が実証されつつある。需要側の不可避性は更に上昇</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>F 食農</td><td>ストルバイト系徐放性Pi肥料市場 $265M→$933M(2036), CAGR <b>13.4%</b>。回収主流(40%)</td><td>離陸前夜。ボトルネックは「規模化」へ移動</td></tr>
+        <tr class="fresh"><td class="num">2026-06-08</td><td>H 材料</td><td>Redwood Materials：回収率<b>95%超</b>、リサイクルNiは新規より20–30%安。精錬上位3国集中度 82%→<b>86%</b>。Cuリサイクル比率37%→33%へ低下</td><td>主流は織り込み気味。回収権と純度規格は空白</td></tr>
+        <tr><td class="num">2026-05-28</td><td>F 食農</td><td>リン可採年数75〜100年、ピーク2030年頃。代替不能だが回収可能、取り組みは少ない</td><td>食料に不可欠なのに退屈で過小評価</td></tr>
         <tr><td class="num">2026-05-28</td><td>D 記憶</td><td>DNAストレージは10¹⁹ bits/cm³、適切保存で数百万年。書き込みは高コスト</td><td>「腐らない媒体」需要は構造的だが市場未成熟＝早すぎて安い</td></tr>
-        <tr><td class="num">2026-05-28</td><td>A/B 熱・計算</td><td>AIデータセンターの電力需要急増、冷却・電力が制約に</td><td>計算の制約は電力と熱へ。廃熱・冷却・熱貯蔵に評価余地</td></tr>
+        <tr><td class="num">2026-05-28</td><td>A/B 熱・計算</td><td>AIデータセンターの電力需要急増、冷却・電力が制約に</td><td>計算の制約は電力と熱へ</td></tr>
         <tr><td class="num">2026-05-28</td><td>C/K 信頼</td><td>主要機関のメガトレンド観でも視野は数十年</td><td>100年視点は視野外＝構造的な評価ギャップ</td></tr>
       </tbody>
     </table>
@@ -324,9 +374,28 @@
 
   <section id="sources">
     <h2><span class="num">08</span>出典・原則</h2>
+    <h3>2026-06-08 追加</h3>
+    <ul class="src">
+      <li><a href="https://www.techradar.com/pro/after-nearly-10-years-twist-bioscience-spin-off-plans-terabyte-scale-dna-storage-in-2026-intending-to-store-13tb-of-data-in-a-single-drop-of-water">TechRadar — Twist スピンアウト Atlas Data Storage</a></li>
+      <li><a href="https://blog.linknovate.com/top-dna-data-storage-startups-in-2026-the-future-of-digital-memory/">Linknovate — Top DNA Data Storage Startups in 2026（Catalog → Biomemory）</a></li>
+      <li><a href="https://www.eyesift.com/faq/c2pa-content-credentials-2026-cryptographic-provenance-adoption/">EyeSift — C2PA Adoption Status 2026</a></li>
+      <li><a href="https://www.eyesift.com/ai-image-detection-2026-c2pa-content-credentials-synthid-watermarks-diffusion-fingerprints-deepfake/">EyeSift — C2PA Deepfake Detection 2026</a></li>
+      <li><a href="https://truescreen.io/articles/c2pa-standard-history-limitations/">Truescreen — C2PA Standard in 2026</a></li>
+      <li><a href="https://www.araner.com/blog/data-center-waste-heat-recovery">Araner — Data Center Waste Heat Recovery</a></li>
+      <li><a href="https://www.enlit.world/library/seasonal-recovery-of-waste-heat-from-data-centres-with-thunder">Enlit — THUNDER（季節間DC廃熱回収）</a></li>
+      <li><a href="https://www.irena.org/Innovation-landscape-for-smart-electrification/Power-to-heat-and-cooling/31-Waste-heat-recovery-from-data-centres">IRENA — Waste heat recovery from data centres</a></li>
+      <li><a href="https://statisticstimes.com/demographics/countries-by-fertility-rate.php">Statistics Times — Countries by Fertility Rate 2026</a></li>
+      <li><a href="https://www.japantimes.co.jp/commentary/2026/02/10/world/asias-falling-fertility-rates/">Japan Times — Asia's falling fertility rates</a></li>
+      <li><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00034-6/fulltext">The Lancet — Responding to declining global fertility rates</a></li>
+      <li><a href="https://www.openpr.com/news/4423384/struvite-based-slow-release-phosphorus-fertilizer-market">openPR — Struvite Fertilizer Market 2026–2036</a></li>
+      <li><a href="https://www.futuremarketinsights.com/reports/phosphorus-recovery-reagents-for-circular-fertilizers-market">Future Market Insights — Phosphorus Recovery Reagents</a></li>
+      <li><a href="https://www.iea.org/reports/recycling-of-critical-minerals">IEA — Recycling of Critical Minerals</a></li>
+      <li><a href="https://www.intelligentliving.co/city-e-waste-critical-minerals/">Intelligent Living — City E-Waste &amp; Critical Minerals</a></li>
+    </ul>
+    <h3>2026-05-28 初回</h3>
     <ul class="src">
       <li><a href="https://www.scientificamerican.com/article/phosphorus-a-looming-crisis/">Scientific American — Phosphorus: A Looming Crisis</a></li>
-      <li><a href="https://www.nationalgeographic.com/science/article/farmers-are-facing-a-phosphorus-crisis-the-solution-starts-with-soil">National Geographic — Farmers are facing a phosphorus crisis</a></li>
+      <li><a href="https://www.nationalgeographic.com/science/article/farmers-are-facing-a-phosphorus-crisis-the-solution-starts-with-soil">National Geographic — Farmers face a phosphorus crisis</a></li>
       <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10296570/">NCBI — DNA Data Storage</a></li>
       <li><a href="https://www.blackrock.com/sg/en/investment-strategies/megatrends-and-thematic-investing">BlackRock — Megatrends &amp; Thematic Investing</a></li>
       <li><a href="https://www.morganstanley.com/Themes/megatrends-future-investment-trends">Morgan Stanley — Megatrends</a></li>
@@ -334,13 +403,13 @@
     <div class="callout" style="margin-top:18px">
       <b>原則</b>：早すぎることは間違いと区別がつかない／流行（10年）と必然（100年）を混同しない／正しいだけでは儲からない、所有できるボトルネックまで降りる／退屈・タブー・低ステータスを見くだすな／反証を歓迎する。
     </div>
-    <p class="meta" style="margin-top:18px">注：初回リサーチの数値は二次情報ベースの初期メモ。布石を打つ前に一次情報での裏取りが必要（運用ループの「反証・更新」）。</p>
+    <p class="meta" style="margin-top:18px">注：数値は二次情報ベースの初期メモ。布石を打つ前に一次情報での裏取りが必要（運用ループの「反証・更新」）。</p>
   </section>
 
 </main>
 
 <footer>
-  In 100 Years — 100年後リサーチ ／ 視点年：約2125年 ／ 生成日：2026-05-28<br>
+  In 100 Years — 100年後リサーチ ／ 視点年：約2125年 ／ 最終更新：2026-06-08（初版 2026-05-28）<br>
   詳細は各 Markdown ドキュメント（<code>docs/</code>・<code>research/</code>）を参照。
 </footer>
 
