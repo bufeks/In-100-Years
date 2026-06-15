@@ -25,7 +25,7 @@
 - **公的年金は数学的に維持不能**（WEF $224兆ギャップ）。個人運用への責任移転は完了済み（401k／iDeCo／NISA）。
 - **複雑性の指数増加**：投資商品・税制・規制が個人の判断キャパシティを超えた。
 - **AI のコモディティ化**：高度な運用がプライベートバンクから個人へ降りる物理的必然。
-- **市場規模**：Robo-advisor 市場 $2T → **$7T（2029）**。Vanguard Digital Advisor $311B（首位）、Wealthfront $75B（1M+口座）、Betterment $46B。
+- **市場規模**：Robo-advisor 市場 $2T → **$7T（2029）**。Vanguard Digital Advisor $311B（首位）、Empower $200B、Schwab $80.9B、Betterment $45.9B、**Wealthfront $36B（1M+ 口座、2 名創業）**。
 
 ## なぜ「いま評価されていない」のか（評価ギャップ）
 
