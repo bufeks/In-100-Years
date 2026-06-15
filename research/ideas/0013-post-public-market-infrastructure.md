@@ -23,7 +23,7 @@
 100 年でも折れない3つの力の合成：
 
 1. **非公開ステイの構造化** — グローバル ユニコーン **1,705–1,717 社**、累計時価 **$8.4T**、累計エクイティ調達 $1.36T。Stripe／SpaceX／OpenAI 等が $100B 規模で未上場。「公開規模に達するまでに上場する」という旧前提が崩れた。
-2. **トークン化の指数成長** — オンチェーン RWA $20B → **$32B**（2026/5）、3 倍/1 年。Tokenized US Treasury $380M(Q1 2023) → **$14B**(Q1 2026)、CAGR **約 230%**。McKinsey 基本予測 **$2–4T(2030)**、BCG-Ripple **$18.9T(2033)**。
+2. **トークン化の指数成長** — オンチェーン RWA **$34.5B（2026/5、年 +100%）**。Tokenized US Treasury **$15B（市場の 45%）**。**BlackRock BUIDL $2.3B**（8 チェーン展開）、**Ondo OUSG+USDY 合計 $2.1B TVL**。McKinsey 基本予測 **$2–4T(2030)**、BCG-Ripple **$18.9T(2033)**。Ondo × JPM × Mastercard × Ripple が XRP Ledger で**初のクロスボーダー Tokenized Treasury 償還**を実行。
 3. **規制の整備** — GENIUS Act（ステーブルコイン、2026 主要期限）、CLARITY Act（トークン化 RWA）、SEC／CFTC 枠組み（2026–27 施行見込み）、Project Crypto の暫定ガイダンス。
 
 加えて機関の本気：**BlackRock BUIDL $2.5B AUM**（最大トークン化 Treasury、2026/5/8 に新規 2 ファンド申請）、**Schwab→Forge 買収 $660M**、**Morgan Stanley→EquityZen 買収**、Ondo OUSG（BUIDL ラッパー）$500M AUM。
