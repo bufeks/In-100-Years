@@ -12,6 +12,7 @@
 - **米連邦遺産税控除が 2026/1/1 に $7M へ低下**（TCJA 失効、議会更新無き場合）→ 関連：[0020](../ideas/0020-intergenerational-transfer-infrastructure.md)。出典：[Yahoo Finance](https://finance.yahoo.com/news/124-trillion-hand-off-2026-031600460.html)
 - **Great Wealth Transfer 年間フロー $1兆 → $1.5兆**へ上方修正。$40兆が widowed women へ。Gen X 今後 10 年最大受領、Millennial 今後 20 年最大。
 - **Wealthfront AUM $36B**（前回引用 $75B から修正、口座数 1M+ は不変）→ 関連：[0019](../ideas/0019-ai-agent-wealth-management.md)。出典：[Investingintheweb](https://investingintheweb.com/brokers/the-largest-robo-advisors-by-aum/)
+- **WPP Elevate28**（2026/2 発表）：**持株会社モデルを廃止**、4 ユニット（Media/Creative/Production/Enterprise）に統合、**年 £250M を WPP Open（agentic マーケティング PF）に投資**、Google AI と 5 年契約。Publicis は Marcel（90,000 人 AI PF）で先行 → クリエイティブエージェンシーの**5 万人モデル解体**、5–50 人の**文化的知性ブティック**が次世代 → 関連：[0022](../ideas/0022-post-ai-creative-agency.md)。出典：[Marketing Dive](https://www.marketingdive.com/news/wpp-abandons-holding-company-model-with-major-strategic-overhaul/813201/), [MARKETECH APAC](https://marketech-apac.com/a-bold-reset-wpp-scraps-holding-structure-targets-500m-in-savings-and-ai-driven-growth/), [eMarketer Publicis](https://www.emarketer.com/content/publicis-accelerates-ai-investment-agencies-race-predictive-power)
 
 | 日付 | ドメイン | シグナル要約 | なぜ重要か（評価ギャップ仮説） | 関連アイデア | 出典 |
 |------|---------|------------|--------------------------|------------|------|

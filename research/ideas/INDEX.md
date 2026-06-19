@@ -17,6 +17,7 @@
 | [0016](0016-meaning-making-infrastructure.md) | 意味の場 | 81 | 92 | **75** | A | Substack／Discord／Patreon／宗教 SaaS／ファンダム運営 |
 | [0004](0004-provenance-infrastructure.md) | 来歴・真正性 | 83 | 76 | **63** | A | C2PA 関連 OSS／ニッチ業界向け真正性 SaaS／TRUE/ADBE 株 |
 | [0019](0019-ai-agent-wealth-management.md) | **AIエージェント運用** | 83 | 72 | **60** | A | Robo SaaS／日本特化 iDeCo/NISA 統合／VG・SCHW 株 |
+| [0022](0022-post-ai-creative-agency.md) | **ポスト AI クリエイティブエージェンシー** | 72 | 84 | **60** | A | 5–50 人ブティック起業／AI オーケストレーション SaaS／文化的知性の個人ブランド化 |
 | [0020](0020-intergenerational-transfer-infrastructure.md) | **世代間移転インフラ** | 90 | 64 | **58** | S | estate planning SaaS（日本特化）／信託銀行株／Trust&Will 周辺 |
 | [0014](0014-human-verified-premium.md) | 人間性プレミアム | 83 | 64 | **53** | A | 人間製造認証 SaaS／IP連動／UMG・SONY 株 |
 | [0017](0017-cultural-inheritance.md) | 文化継承の保存 | 74 | 72 | **53** | A | 日本の方言・口承プロジェクト／NGO 連携 |
@@ -54,6 +55,7 @@
 | [0015](0015-embodied-experience-economy.md) | 体験・場の経済 | 78 | A |
 | [0007](0007-intimacy-economy.md) | 親密性・孤独経済 | 74 | A |
 | [0017](0017-cultural-inheritance.md) | 文化継承の保存 | 74 | A |
+| [0022](0022-post-ai-creative-agency.md) | **ポスト AI クリエイティブエージェンシー** | 72 | A |
 
 ---
 
