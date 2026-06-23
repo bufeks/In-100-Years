@@ -23,6 +23,7 @@
 | [0017](0017-cultural-inheritance.md) | 文化継承の保存 | 74 | 72 | **53** | A | 日本の方言・口承プロジェクト／NGO 連携 |
 | [0007](0007-intimacy-economy.md) | 親密性・孤独経済 | 74 | 72 | **53** | A | ε AIコンパニオン（Chai 型 12人 $30M ARR）／NCII 削除 SaaS |
 | [0015](0015-embodied-experience-economy.md) | 体験・場の経済 | 78 | 64 | **50** | A | 中堅会場ロールアップ／地域フェス／LYV 株 |
+| [0023](0023-cognitive-warfare-defense.md) | **認知戦防御・人間性認証** | 80 | 64 | **51** | A | 政府・選挙特化の deepfake 検出・人間性認証 SaaS／0004 派生 |
 | [0008](0008-deathcare.md) | 死後ケア・葬儀 | 81 | 60 | **49** | A | ローカル M&A／デジタル遺品 SaaS／SCI 株 |
 | [0021](0021-longevity-finance.md) | **寿命延伸金融** | 85 | 48 | **41** | S | 大手保険株（日本生命／第一生命／PRU／MET）／longevity tech 周辺 |
 | [0002](0002-civilizational-data-archive.md) | 超長期アーカイブ | 85 | 44 | **37** | S | TWST 株／応用層 0014・0017 で間接参加 |
@@ -52,6 +53,7 @@
 | [0008](0008-deathcare.md) | 死後ケア・葬儀 | 81 | A |
 | [0016](0016-meaning-making-infrastructure.md) | 意味の場 | 81 | A |
 | [0006](0006-critical-minerals-urban-mining.md) | クリティカルミネラル | 80 | A |
+| [0023](0023-cognitive-warfare-defense.md) | **認知戦防御・人間性認証** | 80 | A |
 | [0015](0015-embodied-experience-economy.md) | 体験・場の経済 | 78 | A |
 | [0007](0007-intimacy-economy.md) | 親密性・孤独経済 | 74 | A |
 | [0017](0017-cultural-inheritance.md) | 文化継承の保存 | 74 | A |
