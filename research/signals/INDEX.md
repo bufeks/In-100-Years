@@ -4,6 +4,12 @@
 
 > 弱いシグナル（まだ誰も騒いでいない兆し）ほど価値がある。一次情報に近いものを優先。
 
+### 2026-08-25 「次の Bitcoin」M クリプト・フロンティア 3 テーマ追加
+
+- **Bitcoin L2 / BTC-fi**：Babylon TVL **$5B**（2025 メインネット稼働）、BTC ステーキング利回りが 21 世紀初の「BTC の使い道」を提示。Stacks 時価総額 **$1.8B**、STX $1.5、Nakamoto アップグレード後 TX 高速化。BitVM の理論実装が 2027-2028 候補。**BTC $2T のうち 95% が非稼働**という空白 → 関連：[0027](../ideas/0027-bitcoin-l2.md)。出典：[Babylon Labs](https://babylonlabs.io/), [Stacks Foundation](https://www.stacks.co/)
+- **RWA トークン化**：BlackRock BUIDL **$2.5B TVL**、Ondo OUSG **$500M**、RWA 全体 **$30B**（2026 Q2）→ BCG 予測 **2030 年 $16T**（500x）。Hamilton Lane / KKR / Apollo が Securitize 経由で PE ファンド持分をトークン化開始。日本 Progmat（三菱 UFJ・野村・SBI）第一波稼働。**世界金融資産 $900T のうち 0.003% しかトークン化されていない** → 関連：[0028](../ideas/0028-rwa-tokenization.md)。出典：BCG "Relevance of on-chain asset tokenization in 'crypto winter'"、[Securitize](https://securitize.io/), [Ondo Finance](https://ondo.finance/)
+- **ZK インフラ**：StarkNet ピーク時価総額 $10B → **現在 $500M（-95%）** で市場失望＝逆張り機会最大。zkSync $300M、EU **eIDAS 2.0（2026 施行）**でデジタル ID の ZK 採用が事実上義務化。ZK-ML（EZKL / Modulus Labs）が AI 推論の証明可能化を開発中、AI 規制強化で 2028-2030 に義務化候補 → 関連：[0029](../ideas/0029-zk-infrastructure.md)。出典：[Electric Capital Developer Report 2025](https://www.developerreport.com/), [StarkWare](https://starkware.co/), EU eIDAS 2.0
+
 ### 2026-08-20 Kabukicho 型ポジション追加
 
 - **日本の空き家 8.5M+**（総務省 2023 住宅・土地統計）、増加継続。相続放棄物件は自治体空き家バンクで**数十万円**、任意売却で数百万〜数千万。廃業旅館・ゴルフ場・ホテルの破綻件数が過去最高水準。土地は物理的に消えない＝**歌舞伎町型 4 条件**すべて成立 → 関連：[0025](../ideas/0025-japan-akiya-contrarian.md)。出典：総務省統計局、LIFULL 空き家バンク、東京商工リサーチ
