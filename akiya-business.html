@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>空き家・土地活用ビジネス 7 型 — In 100 Years</title>
+<meta name="description" content="日本の空き家・土地を Q1/Q3 の income エンジンに変換する 7 つの事業モデル。サブリース再生／一棟貸し宿泊／空き家管理／廃業旅館承継／土地バンキング／クリエイター拠点／メディア＆ファンド。">
+<style>
+  :root{
+    --bg:#0b1020; --card:#ffffff; --ink:#1a1a2e; --muted:#5b6478;
+    --line:#e6e8f0; --accent:#4f46e5; --accent2:#0ea5a4; --amber:#f59e0b;
+    --gold:#d4a017; --green:#16a34a; --blue:#2563eb; --gray:#9aa3b2;
+    --maxw:1020px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;color:var(--ink);background:#f6f7fb;
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.7;font-size:16px;letter-spacing:.01em}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
+  .nav .brand{color:#fff;font-weight:700;margin-right:auto;letter-spacing:.04em}
+  .nav a{color:#c7cde0;font-size:13.5px;white-space:nowrap}
+  .nav a:hover{color:#fff;text-decoration:none}
+  .hero{background:radial-gradient(1200px 500px at 70% -10%,#1e2a55 0,var(--bg) 55%);color:#eef1fb}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:48px 20px 40px}
+  .eyebrow{color:#8ea2ff;font-weight:700;letter-spacing:.16em;font-size:12px;text-transform:uppercase}
+  .hero h1{font-size:clamp(24px,4vw,38px);line-height:1.2;margin:.4em 0 .25em}
+  .hero .lede{font-size:clamp(14px,1.8vw,17px);color:#c4cbe6;max-width:64ch;margin:0}
+  main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 60px}
+  section{padding:36px 0 8px;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  h2{font-size:clamp(19px,2.6vw,26px);margin:.2em 0 .1em}
+  h2 .num{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:.5ch}
+  .sec-lead{color:var(--muted);margin:.2em 0 1.2em;max-width:66ch}
+  .grid{display:grid;gap:14px}
+  @media(min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}.grid.cols-3{grid-template-columns:1fr 1fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:.5em 0 .8em;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:#fff}
+  th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:#f0f2f9;font-size:12.5px;color:#3a4256}
+  tbody tr:last-child td{border-bottom:0}
+  td.r{text-align:right;font-variant-numeric:tabular-nums}
+  .biz{border-left:4px solid var(--accent2);background:var(--card);border-radius:12px;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 20px;margin:16px 0}
+  .biz.hot{border-left-color:var(--gold)}
+  .biz h3{margin:0 0 .2em;font-size:18px}
+  .biz .tag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 10px;border-radius:999px;margin-left:8px;vertical-align:middle}
+  .tag.kick{background:#ecfdf5;color:#065f46;border:1px solid #6ee7b7}
+  .tag.hon{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+  .biz .one{font-size:14.5px;color:#2b3147;margin:.3em 0 .6em}
+  .biz ul{margin:.4em 0 0;padding-left:1.3em;font-size:13.5px}
+  .biz li{margin:.15em 0}
+  .seq{background:#0b1020;color:#dbe2f5;border-radius:12px;padding:16px 20px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.9;overflow-x:auto;white-space:pre}
+  .seq b{color:#ffd27a}
+  .callout{background:#fff7ed;border:1px solid #fcd9a8;border-radius:12px;padding:12px 16px;color:#7c4a03;font-size:14px;margin:14px 0}
+  .meta{color:var(--muted);font-size:13px;margin:.4em 0}
+  footer{max-width:var(--maxw);margin:0 auto;padding:24px 20px 50px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <span class="brand">In 100 Years</span>
+  <a href="index.html">← トップへ戻る</a>
+  <a href="#map">全体マップ</a>
+  <a href="#models">7 モデル</a>
+  <a href="#seq">推奨シーケンス</a>
+  <a href="#legal">法規制・資金</a>
+</div></nav>
+
+<header class="hero"><div class="hero-inner">
+  <div class="eyebrow">0025 日本空き家 · 事業化レイヤー</div>
+  <h1>空き家・土地活用ビジネス 7 型</h1>
+  <p class="lede"><a href="https://github.com/bufeks/In-100-Years/blob/main/plans/2026-akiya-execution.md" style="color:#9fe3df">取得ロードマップ（買い方）</a>に対する「<b>稼ぎ方</b>」。空き家を Q4（寝かせる 100 年資産）だけでなく、Q1/Q3 の income エンジンに変換する 7 つの事業モデル。目標：数年で ¥30M+/年。</p>
+</div></header>
+
+<main>
+
+  <section id="map">
+    <h2><span class="num">01</span>全体マップ — 資本×収益タイプ</h2>
+    <table>
+      <thead><tr><th></th><th>低資本（〜¥3M）</th><th>中資本（¥3-30M）</th><th>高資本（¥30M+）</th></tr></thead>
+      <tbody>
+        <tr><td><b>Income（数年）</b></td><td>B-1 サブリース再生<br>B-3 空き家管理</td><td>B-2 一棟貸し宿泊<br>B-6 クリエイター拠点</td><td><b>B-4 廃業旅館承継</b></td></tr>
+        <tr><td><b>つるはし</b></td><td>B-7 メディア＆ファンド</td><td>―</td><td>―</td></tr>
+        <tr><td><b>資産（Q4）</b></td><td>―</td><td>B-5 土地バンキング＋転用</td><td>B-5 大規模（廃ゴルフ場等）</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="models">
+    <h2><span class="num">02</span>7 つの事業モデル</h2>
+
+    <div class="biz">
+      <h3>B-1. サブリース型空き家再生（借りて直して貸す）</h3>
+      <p class="one">所有者から月 ¥10-40K で借り上げ（または無償＋修繕負担）、¥1-3M でリノベし賃貸 or 民泊で運用。<b>土地を買わないので資本が 1/5 で済む</b>。最速・最小資本。</p>
+      <table>
+        <tbody>
+          <tr><td>初期投資/物件</td><td class="r">¥1-3M（リノベのみ）</td></tr>
+          <tr><td>月次収支/物件</td><td class="r">賃料 ¥80K − 借上料 ¥25K − 運営費 ¥15K ＝ <b>¥40K</b></td></tr>
+          <tr><td>資本回収</td><td class="r">25-60 ヶ月（民泊なら 18-30 ヶ月）</td></tr>
+          <tr><td>10 物件時の年間営業利益</td><td class="r"><b>¥5-10M</b></td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li><b>先行事例</b>：アキサポ（ジェクトワン）、カリアゲJAPAN（ルーヴィス、6 年借上げ・改修費ゼロモデル）</li>
+        <li><b>リスク</b>：契約設計（定期借家＋転貸承諾を必須に）、修繕投資の回収前解約</li>
+      </ul>
+    </div>
+
+    <div class="biz">
+      <h3>B-2. 一棟貸し宿泊（民泊・簡易宿所）<span class="tag kick">kiCk ○</span></h3>
+      <p class="one">熱海・白馬・京都山間部・糸島で取得（¥2-10M）＋リノベ（¥3-8M）し一棟貸しの宿に。<b>簡易宿所営業許可で 180 日規制を回避</b>。デザイン宿は ADR 1.5-2x。</p>
+      <table>
+        <thead><tr><th>項目</th><th class="r">保守</th><th class="r">強気</th></tr></thead>
+        <tbody>
+          <tr><td>ADR（1 棟 1 泊）</td><td class="r">¥30K</td><td class="r">¥80K（白馬冬季・京都）</td></tr>
+          <tr><td>稼働率</td><td class="r">45%</td><td class="r">65%</td></tr>
+          <tr><td>年商/棟</td><td class="r">¥4.9M</td><td class="r">¥19M</td></tr>
+          <tr><td>営業利益/棟（運営委託 20% 控除後）</td><td class="r"><b>¥1.5-2M</b></td><td class="r"><b>¥6-8M</b></td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li><b>3-5 棟で年間営業利益 ¥5-30M</b> ＝ Q1 目標に単独で届き得る</li>
+        <li><b>規制</b>：京都市は独自規制強め、白馬・熱海は比較的取りやすい。用途地域・消防・保健所を取得前に確認</li>
+        <li><b>融資</b>：日本政策金融公庫（生活衛生貸付）＋自治体の空き家改修補助 ¥0.5-2M</li>
+      </ul>
+    </div>
+
+    <div class="biz">
+      <h3>B-3. 空き家管理サービス — ストック型 CF の床</h3>
+      <p class="one">遠隔所有者（相続人）向けに月 ¥5-10K で見回り・通風・草刈り・台風後点検を代行。<b>粗利率 50-70%、解約率が極めて低いストック収益</b>。</p>
+      <table>
+        <tbody>
+          <tr><td>単価</td><td class="r">¥5-10K/月/軒</td></tr>
+          <tr><td>100 軒到達時</td><td class="r">年商 ¥6-12M、営業利益 <b>¥3-8M</b></td></tr>
+          <tr><td>顧客獲得コスト</td><td class="r">自治体・司法書士・葬儀社経由でほぼゼロ可</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li><b>本当の価値は情報フロー</b>：管理物件は将来の売却・賃貸・解体の案件源。B-1/B-2 の仕入れパイプラインになる</li>
+        <li><b>先行事例</b>：日本空き家サポート、L&F、シルバー人材提携型</li>
+      </ul>
+    </div>
+
+    <div class="biz hot">
+      <h3>B-4. 廃業旅館・ホテルの事業承継×リノベ<span class="tag hon">本命</span><span class="tag kick">kiCk ◎</span></h3>
+      <p class="one">後継者難の温泉旅館（10-20 室）を<b>事業ごと ¥10-50M で承継</b>（TRANBI／BATONZ／事業承継・引継ぎ支援センター）。許認可・温泉権・従業員ごと引き継ぎ、デザインリノベ＋インバウンド直販化で ADR を 2-3x に。</p>
+      <table>
+        <thead><tr><th>項目</th><th class="r">承継前</th><th class="r">承継後 3 年目</th></tr></thead>
+        <tbody>
+          <tr><td>ADR</td><td class="r">¥12K</td><td class="r">¥30K</td></tr>
+          <tr><td>稼働率</td><td class="r">40%</td><td class="r">60%</td></tr>
+          <tr><td>年商</td><td class="r">¥35M</td><td class="r">¥130M</td></tr>
+          <tr><td>営業利益</td><td class="r">▲¥2M</td><td class="r"><b>¥15-40M</b></td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li><b>これ 1 件で ¥30M/年 目標を満たし得る</b>。土地・温泉権はそのまま Q4 資産</li>
+        <li><b>資金</b>：日本政策金融公庫「事業承継・集約・活性化支援資金」＋事業承継・引継ぎ補助金。自己資金 ¥5-15M で LBO 的に組める</li>
+        <li><b>リスク</b>：旧耐震の改修費（¥20-100M 爆弾）、従業員流出、温泉権の権利関係。<b>DD で建物・源泉・簿外債務を最優先</b></li>
+        <li><b>先行事例</b>：湯河原・城崎・熱海での承継リノベ再生（客室単価 3 倍化事例多数）</li>
+      </ul>
+    </div>
+
+    <div class="biz">
+      <h3>B-5. 土地バンキング＋用地転用 — Q4 の攻め版</h3>
+      <p class="one">二束三文の土地（廃ゴルフ場・遊休農地・限界集落）をまとめて取得し、<b>運用は他人にやらせて地代を取る</b>：太陽光・蓄電池用地、データセンター誘致、キャンプ場・グランピングへの事業用定期借地、霊園。</p>
+      <ul>
+        <li>取得 ¥数万/坪 → 事業用定期借地 20-30 年で<b>年利回り 4-10% ＋転売オプション</b></li>
+        <li>系統用蓄電池の用地需要が 2024 年以降急拡大 ＝ 新しい反転トリガー</li>
+        <li>Q1 の利益の再投資先として位置づける（純投資）</li>
+      </ul>
+    </div>
+
+    <div class="biz hot">
+      <h3>B-6. クリエイター拠点（スタジオ・レジデンス）<span class="tag kick">kiCk ◎◎ シナジー最大</span></h3>
+      <p class="one">東京 1-2 時間圏（熱海・南房総・那須）の大型空き家・元保養所を<b>撮影スタジオ＋制作合宿所＋ワーケーション拠点</b>に転換。東京のクリエイティブ産業に日貸し・法人契約で貸す。</p>
+      <table>
+        <tbody>
+          <tr><td>取得＋改修</td><td class="r">¥10-30M</td></tr>
+          <tr><td>スタジオ日貸し</td><td class="r">¥50-150K/日 × 月 8-15 日</td></tr>
+          <tr><td>法人サブスク（合宿・撮影枠）</td><td class="r">¥100-300K/月 × 3-5 社</td></tr>
+          <tr><td>年間営業利益</td><td class="r"><b>¥5-15M</b></td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li><b>kiCk の顧客ネットワークがそのまま需要</b>。自社制作の原価削減＋外販の両取り</li>
+        <li>ハウススタジオは都内で慢性的供給不足、郊外一棟型は競合が薄い</li>
+        <li>0022（ポスト AI クリエイティブ）・0024（クリエイター IP）と同一顧客に別レイヤーで課金</li>
+      </ul>
+    </div>
+
+    <div class="biz">
+      <h3>B-7. 空き家メディア＆小口ファンド — つるはし型<span class="tag kick">kiCk ◎</span></h3>
+      <p class="one">B-1〜B-6 の実践過程を<b>メディア化</b>（YouTube/note「空き家で年収 3,000 万」）→ 案件紹介料・スクール・コンサル → <b>不動産特定共同事業（小規模 1 号）等で小口ファンド化</b>し、他人の資本で取得規模を拡大。</p>
+      <ul>
+        <li>メディア単体：年 ¥3-10M（広告・講座・紹介料）</li>
+        <li>ファンド化後：AUM ¥100-300M × 手数料 2-3% ＋成功報酬</li>
+        <li>0016（意味の場）と同型：実践者の一次情報コンテンツは競合が作れない</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="seq">
+    <h2><span class="num">03</span>推奨シーケンス（数年で ¥30M+/年）</h2>
+    <div class="seq"><b>Year 1</b>   B-3 管理 50 軒（情報網＋CF 床 ¥2-3M）＋ B-1 サブリース 3 物件
+         └ 同時に B-7 メディア発信開始（仕込み）
+<b>Year 2</b>   B-2 一棟貸し 2-3 棟（¥5-10M 投資、営業利益 ¥5-12M）
+         └ B-6 クリエイター拠点 1 号（kiCk 顧客で初年度から埋める）
+<b>Year 3</b>   B-4 廃業旅館 1 件承継（公庫融資、営業利益 ¥15-40M）→ <b>合計 ¥30M+/年</b>
+<b>Year 4+</b>  B-7 ファンド化で他人資本レバレッジ、B-5 土地バンキングへ利益再投資（Q4）</div>
+    <div class="callout">
+      <b>キー判断</b>：(1) B-4 が最短の一撃だが DD 力が要る——Year 1-2 の B-1/B-2 は「小さく失敗して学ぶ」授業料。(2) B-3 と B-7 は資本ほぼゼロで今日から回し、案件情報とオーディエンスという 2 つの複利資産を貯める。(3) B-6 は kiCk の不公正な優位——他の空き家プレイヤーは東京のクリエイティブ需要にアクセスできない。(4) <b>土地は売らない</b>（Kabukicho 原則）：事業は income、土地は 100 年資産として分離会計。
+    </div>
+  </section>
+
+  <section id="legal">
+    <h2><span class="num">04</span>法規制・資金の要点</h2>
+    <div class="grid cols-2">
+      <div class="card"><b>宿泊</b><p style="margin:.3em 0 0;font-size:13.5px">簡易宿所（旅館業法、日数無制限）＞住宅宿泊事業法（年 180 日上限）。用途地域・消防・保健所を取得前に確認。</p></div>
+      <div class="card"><b>転貸（B-1）</b><p style="margin:.3em 0 0;font-size:13.5px">定期借家契約＋転貸承諾を書面で。所有者との契約設計が生命線。</p></div>
+      <div class="card"><b>融資・補助金</b><p style="margin:.3em 0 0;font-size:13.5px">日本政策金融公庫（新規開業・事業承継・生活衛生）／自治体の空き家改修補助（¥0.5-2M）／事業承継・引継ぎ補助金。</p></div>
+      <div class="card"><b>農地</b><p style="margin:.3em 0 0;font-size:13.5px">農地法 3 条/5 条許可が必要。農地付き古民家は「空き家に付随した農地」特例（下限面積撤廃）で取得容易化済み。</p></div>
+    </div>
+    <p class="meta"><b>反証条件（このビジネス群を止める条件）</b>：インバウンドの構造的頭打ち（B-2/B-4 前提崩壊）／民泊・簡易宿所への規制強化が Tier A 地域に波及／空き家管理の大手参入（B-3 価格破壊）／公庫の事業承継融資の縮小（B-4 レバレッジ喪失）。四半期モニタリング。</p>
+  </section>
+
+</main>
+
+<footer>
+  <a href="index.html">← In 100 Years トップへ</a> ／ 元データ：<a href="https://github.com/bufeks/In-100-Years/blob/main/plans/akiya-business-models.md">plans/akiya-business-models.md</a> ／ 取得ロードマップ：<a href="https://github.com/bufeks/In-100-Years/blob/main/plans/2026-akiya-execution.md">plans/2026-akiya-execution.md</a> ／ 最終更新：2026-08-25
+</footer>
+
+</body>
+</html>
